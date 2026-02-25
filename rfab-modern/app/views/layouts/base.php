@@ -16,9 +16,9 @@ $metaDescription = $metaDescription ?? ($site['seo']['description'] ?? 'Premium 
     <link rel="stylesheet" href="/assets/css/critical.css">
     <link rel="stylesheet" href="/assets/css/app.min.css">
 </head>
-<body>
+<body class="no-js">
 <?php require APP_ROOT . '/views/layouts/header.php'; ?>
-<main>
+<main id="main-content" tabindex="-1">
     <?= $content ?>
 </main>
 <?php require APP_ROOT . '/views/layouts/footer.php'; ?>
