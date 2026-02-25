@@ -4,7 +4,8 @@ declare(strict_types=1);
 $brandNames = array_values(array_map(static fn(array $brand): string => (string) ($brand['name'] ?? ''), $brands));
 ?>
 <section class="hero-video-section" id="hero-video">
-    <div class="hero-pin">
+    <div class="hero-pin" data-hero-pin>
+        <img class="hero-poster" src="/assets/img/brand/covers/brand-1.jpeg" alt="RFAB Hero Poster" width="1920" height="1080" fetchpriority="high">
         <video
             class="hero-video"
             preload="auto"
@@ -12,15 +13,26 @@ $brandNames = array_values(array_map(static fn(array $brand): string => (string)
             muted
             poster="/assets/img/brand/covers/brand-1.jpeg"
             aria-label="RFAB cinematic biryani presentation"
+            data-desktop-src="/assets/video/Flow_delpmaspu222_4k.mp4"
+            data-mobile-src="/assets/video/Flow_delpmaspu222_1080p.mp4"
         >
-            <source src="/assets/video/Flow_delpmaspu222_1080p.mp4" media="(max-width: 1024px)" type="video/mp4">
-            <source src="/assets/video/Flow_delpmaspu222_.mp4" type="video/mp4">
+            <source src="/assets/video/Flow_delpmaspu222_4k.mp4" type="video/mp4">
         </video>
 
         <div class="hero-overlay" aria-hidden="true"></div>
 
         <div class="container hero-content">
             <p class="eyebrow">THE AUTHENTIC CLOUD KITCHEN CHAIN</p>
+            <h1>Roshani Foods &amp; Beverages</h1>
+            <p class="hero-subtext">Authentic biryani flavor, layered aroma, and signature craftsmanship in every serving.</p>
+            <div class="cta-row">
+                <a class="btn btn-primary" href="https://www.zomato.com" target="_blank" rel="noopener">Order on Zomato</a>
+                <a class="btn btn-ghost" href="https://www.swiggy.com" target="_blank" rel="noopener">Order on Swiggy</a>
+            </div>
+            <div class="meta-row">
+                <span>UDYAM: <?= htmlspecialchars($site['registrations']['udyam'] ?? '') ?></span>
+                <span>SANSTHA: <?= htmlspecialchars($site['registrations']['sansthaAadhaar'] ?? '') ?></span>
+            </div>
             <p class="scroll-hint">Scroll to explore</p>
         </div>
     </div>

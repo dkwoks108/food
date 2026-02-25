@@ -33,11 +33,11 @@ declare(strict_types=1);
             <ul class="clean-list contact-list">
                 <li>
                     <img width="32" height="32" src="https://img.icons8.com/3d-fluency/94/phone.png" alt="phone">
-                    <span><?= htmlspecialchars($site['phone'] ?? '') ?></span>
+                    <a href="tel:<?= htmlspecialchars((string) preg_replace('/\D+/', '', (string) ($site['phone'] ?? ''))) ?>"><?= htmlspecialchars($site['phone'] ?? '') ?></a>
                 </li>
                 <li>
                     <img width="32" height="32" src="https://img.icons8.com/3d-fluency/94/new-post.png" alt="email">
-                    <span><?= htmlspecialchars($site['email'] ?? '') ?></span>
+                    <a href="mailto:<?= htmlspecialchars($site['email'] ?? '') ?>"><?= htmlspecialchars($site['email'] ?? '') ?></a>
                 </li>
                 <li>
                     <img width="32" height="32" src="https://img.icons8.com/3d-fluency/94/marker.png" alt="location">
