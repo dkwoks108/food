@@ -1,27 +1,36 @@
 <?php
 declare(strict_types=1);
+
+$brandNames = array_values(array_map(static fn(array $brand): string => (string) ($brand['name'] ?? ''), $brands));
 ?>
-<section class="hero hero-premium">
-    <div class="container hero-grid">
-        <div>
-            <p class="eyebrow">The Authentic Cloud Kitchen Chain</p>
+<section class="hero-video-section" id="hero-video">
+    <div class="hero-pin">
+        <video
+            class="hero-video"
+            preload="metadata"
+            playsinline
+            muted
+            poster="/assets/img/brand/covers/brand-1.jpeg"
+            aria-label="RFAB cinematic biryani presentation"
+        >
+            <source src="/assets/video/Flow_delpmaspu222_.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="container hero-content">
+            <p class="eyebrow">THE AUTHENTIC CLOUD KITCHEN CHAIN</p>
             <h1>Roshani Foods &amp; Beverages</h1>
-            <p>Premium biryani craftsmanship with rich aroma, layered flavor, and modern delivery excellence.</p>
+            <p class="hero-subtext">Enjoy authentic biryani crafted with signature spice layering, slow-cooked aroma, and rich Mughlai depth in every bite.</p>
             <div class="cta-row">
-                <a class="btn btn-primary" href="/brands">Explore Brands</a>
-                <a class="btn btn-ghost" href="/products">View Menu</a>
+                <a class="btn btn-primary" href="https://www.zomato.com" target="_blank" rel="noopener">Order on Zomato</a>
+                <a class="btn btn-ghost" href="https://www.swiggy.com" target="_blank" rel="noopener">Order on Swiggy</a>
             </div>
             <div class="meta-row">
-                <span>Available on Zomato &amp; Swiggy</span>
                 <span>UDYAM: <?= htmlspecialchars($site['registrations']['udyam'] ?? '') ?></span>
-                <span>Sanstha Aadhaar: <?= htmlspecialchars($site['registrations']['sansthaAadhaar'] ?? '') ?></span>
+                <span>SANSTHA: <?= htmlspecialchars($site['registrations']['sansthaAadhaar'] ?? '') ?></span>
             </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-            <div class="bowl"></div>
-            <div class="steam steam-1"></div>
-            <div class="steam steam-2"></div>
-            <div class="steam steam-3"></div>
+            <p class="scroll-hint">Scroll to explore</p>
         </div>
     </div>
 </section>
@@ -40,19 +49,16 @@ declare(strict_types=1);
     <div class="container">
         <h2>Our Authentic Brands of Biryani</h2>
         <p class="muted">With authentic Indian and Mughlai taste.</p>
-        <div class="card-grid">
-            <?php foreach ($brands as $brand): ?>
-                <article class="card reveal">
-                    <h3><?= htmlspecialchars($brand['name']) ?></h3>
-                    <p class="muted">FSSAI: <?= htmlspecialchars($brand['fssaiNo']) ?></p>
-                    <div class="cta-row">
-                        <a class="btn btn-small" href="<?= htmlspecialchars($brand['platforms']['zomato'] ?? '#') ?>" target="_blank" rel="noopener">Zomato</a>
-                        <?php if (!empty($brand['platforms']['swiggy'])): ?>
-                            <a class="btn btn-small btn-ghost" href="<?= htmlspecialchars($brand['platforms']['swiggy']) ?>" target="_blank" rel="noopener">Swiggy</a>
-                        <?php endif; ?>
+        <div class="brands-grid">
+            <?php for ($i = 1; $i <= 9; $i++): ?>
+                <?php $name = $brandNames[$i - 1] ?? ('Brand ' . $i); ?>
+                <article class="brand-card reveal">
+                    <img src="/assets/img/brand/covers/brand-1.jpeg" alt="<?= htmlspecialchars($name) ?>" loading="lazy" width="720" height="720">
+                    <div class="brand-card-body">
+                        <h3><?= htmlspecialchars($name) ?></h3>
                     </div>
                 </article>
-            <?php endforeach; ?>
+            <?php endfor; ?>
         </div>
     </div>
 </section>
@@ -94,15 +100,19 @@ declare(strict_types=1);
 
 <section class="section">
     <div class="container">
-        <h2>What Our Customers Say</h2>
-        <div class="reviews-slider" role="region" aria-label="Customer reviews teaser">
-            <?php foreach ($reviews as $review): ?>
-                <article class="card review-card reveal">
-                    <p>“<?= htmlspecialchars($review['text']) ?>”</p>
-                    <p class="muted"><?= htmlspecialchars($review['customerName']) ?></p>
-                    <p class="stars" aria-label="Rating <?= (int) $review['rating'] ?> out of 5"><?= str_repeat('★', (int) $review['rating']) ?></p>
-                </article>
-            <?php endforeach; ?>
+        <h2>Reviews</h2>
+        <div class="swiper reviews-swiper" role="region" aria-label="Customer reviews">
+            <div class="swiper-wrapper">
+                <?php foreach ($reviews as $review): ?>
+                    <article class="swiper-slide card review-card">
+                        <p>“<?= htmlspecialchars($review['text']) ?>”</p>
+                        <p><strong><?= htmlspecialchars($review['customerName']) ?></strong></p>
+                        <div class="stars" data-stars>★★★★★</div>
+                        <small class="muted" data-rating-text>5.0/5</small>
+                    </article>
+                <?php endforeach; ?>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 </section>

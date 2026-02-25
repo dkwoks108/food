@@ -15,7 +15,7 @@ class HomeController extends BaseController
         $brands = (new BrandRepository())->all();
         $chefs = array_slice((new ChefRepository())->all(), 0, 4);
         $products = array_slice((new ProductRepository())->all(), 0, 8);
-        $reviews = array_slice((new ReviewRepository())->all(), 0, 4);
+        $reviews = (new ReviewRepository())->all();
 
         return $this->render('home', [
             'title' => 'Home',

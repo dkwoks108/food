@@ -22,5 +22,35 @@
     "customerName": "Vidushi Singh",
     "rating": 5,
     "text": "One of the best cloud-kitchen biryani experiences in Jaipur."
+  },
+  {
+    "id": "review-kanishk",
+    "customerName": "Kanishk Srivastava",
+    "rating": 5,
+    "text": "Beautiful aroma, premium texture, and truly satisfying biryani layers."
+  },
+  {
+    "id": "review-neha",
+    "customerName": "Neha Verma",
+    "rating": 5,
+    "text": "Loved the packaging and consistency. Flavor profile is always on point."
+  },
+  {
+    "id": "review-harshit",
+    "customerName": "Harshit Yadav",
+    "rating": 4,
+    "text": "Excellent spice balance and quality ingredients. Great value for taste."
+  },
+  {
+    "id": "review-asma",
+    "customerName": "Asma Khan",
+    "rating": 5,
+    "text": "Authentic and rich. The aftertaste and fragrance feel very premium."
+  },
+  {
+    "id": "review-ravi",
+    "customerName": "Ravi Sharma",
+    "rating": 5,
+    "text": "The biryani arrives hot, flavorful, and perfectly cooked every time."
   }
 ]
