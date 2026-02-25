@@ -28,6 +28,16 @@ declare(strict_types=1);
 
 <section class="section">
     <div class="container">
+        <div class="promise-grid">
+            <article class="card reveal"><h3>Authentic Craft</h3><p class="muted">Traditional layering and dum process for signature aroma.</p></article>
+            <article class="card reveal"><h3>Premium Ingredients</h3><p class="muted">Handpicked spices and fresh cuts curated daily.</p></article>
+            <article class="card reveal"><h3>Reliable Delivery</h3><p class="muted">Consistent taste quality across every order point.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
         <h2>Our Authentic Brands of Biryani</h2>
         <p class="muted">With authentic Indian and Mughlai taste.</p>
         <div class="card-grid">
@@ -85,7 +95,7 @@ declare(strict_types=1);
 <section class="section">
     <div class="container">
         <h2>What Our Customers Say</h2>
-        <div class="card-grid reviews-grid">
+        <div class="reviews-slider" role="region" aria-label="Customer reviews teaser">
             <?php foreach ($reviews as $review): ?>
                 <article class="card review-card reveal">
                     <p>“<?= htmlspecialchars($review['text']) ?>”</p>
