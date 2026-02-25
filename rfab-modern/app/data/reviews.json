@@ -1,0 +1,26 @@
+[
+  {
+    "id": "review-yash",
+    "customerName": "Yash Singh",
+    "rating": 5,
+    "text": "Authentic aroma, rich texture, and perfect spice balance."
+  },
+  {
+    "id": "review-sanjay",
+    "customerName": "Sanjay Sharma",
+    "rating": 5,
+    "text": "Consistent quality every order, highly recommended."
+  },
+  {
+    "id": "review-adi",
+    "customerName": "Adi Yadav",
+    "rating": 4,
+    "text": "Loved the flavor layering and generous portions."
+  },
+  {
+    "id": "review-vidushi",
+    "customerName": "Vidushi Singh",
+    "rating": 5,
+    "text": "One of the best cloud-kitchen biryani experiences in Jaipur."
+  }
+]

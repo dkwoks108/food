@@ -1,0 +1,14 @@
+[
+  { "id": "murg-makhani-biryani", "name": "Murg Makhani Biryani", "category": "Chicken" },
+  { "id": "egg-biryani", "name": "Egg Biryani", "category": "Egg" },
+  { "id": "bhagyannagar-dum-chicken", "name": "Bhagyannagar Dum Chicken Biryani", "category": "Chicken" },
+  { "id": "chicken-korma-biryani", "name": "Chicken Korma Biryani", "category": "Chicken" },
+  { "id": "seekh-kabab-biryani", "name": "Chicken Seekh Kabab Biryani", "category": "Chicken" },
+  { "id": "leg-piece-biryani", "name": "Chicken Leg Piece Biryani", "category": "Chicken" },
+  { "id": "dhaakad-biryani", "name": "Dilli ki Dhaakad Chicken Biryani", "category": "Chicken" },
+  { "id": "cheese-burst-biryani", "name": "Chicken Cheese Burst Biryani", "category": "Chicken" },
+  { "id": "mutton-dum", "name": "Bhagyannagar Mutton Dum Biryani", "category": "Mutton" },
+  { "id": "paneer-biryani", "name": "Paneer Biryani", "category": "Veg" },
+  { "id": "veg-biryani", "name": "Veg Biryani", "category": "Veg" },
+  { "id": "kathal-biryani", "name": "Kathal Biryani", "category": "Veg" }
+]

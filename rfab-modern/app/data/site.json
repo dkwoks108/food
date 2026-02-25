@@ -1,0 +1,23 @@
+{
+  "brandName": "Roshani Foods & Beverages",
+  "tagline": "The Authentic Cloud Kitchen Chain",
+  "phone": "8504040808",
+  "email": "roshanifoodsandbeverages@gmail.com",
+  "address": "Jaipur, Rajasthan, India",
+  "whatsapp": "918504040808",
+  "registrations": {
+    "udyam": "UDYAM-RJ-17-0556232",
+    "sansthaAadhaar": "RJ/2026/778845"
+  },
+  "social": {
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/"
+  },
+  "legal": {
+    "copyright": "Copyright 2026 RFAB",
+    "credit": "Web development by RFAB Digital"
+  },
+  "seo": {
+    "description": "Premium, authentic biryani experiences by RFAB."
+  }
+}

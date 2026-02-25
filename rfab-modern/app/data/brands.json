@@ -1,0 +1,32 @@
+[
+  {
+    "id": "house-of-biryani",
+    "name": "The House of Biryani",
+    "fssaiNo": "10021022000111",
+    "description": "Royal dum biryani crafted with layered spice balance.",
+    "platforms": {
+      "zomato": "https://zomato.com",
+      "swiggy": "https://swiggy.com"
+    }
+  },
+  {
+    "id": "handi-biryani",
+    "name": "Handi Biryani",
+    "fssaiNo": "10021022000112",
+    "description": "Slow-cooked handi richness with signature aroma.",
+    "platforms": {
+      "zomato": "https://zomato.com",
+      "swiggy": "https://swiggy.com"
+    }
+  },
+  {
+    "id": "biryani-junction",
+    "name": "Biryani Junction",
+    "fssaiNo": "10021022000113",
+    "description": "Bold flavors for modern biryani lovers.",
+    "platforms": {
+      "zomato": "https://zomato.com",
+      "swiggy": ""
+    }
+  }
+]
