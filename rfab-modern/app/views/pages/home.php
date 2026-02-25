@@ -7,12 +7,13 @@ $brandNames = array_values(array_map(static fn(array $brand): string => (string)
     <div class="hero-pin">
         <video
             class="hero-video"
-            preload="metadata"
+            preload="auto"
             playsinline
             muted
             poster="/assets/img/brand/covers/brand-1.jpeg"
             aria-label="RFAB cinematic biryani presentation"
         >
+            <source src="/assets/video/Flow_delpmaspu222_1080p.mp4" media="(max-width: 1024px)" type="video/mp4">
             <source src="/assets/video/Flow_delpmaspu222_.mp4" type="video/mp4">
         </video>
 
@@ -20,16 +21,6 @@ $brandNames = array_values(array_map(static fn(array $brand): string => (string)
 
         <div class="container hero-content">
             <p class="eyebrow">THE AUTHENTIC CLOUD KITCHEN CHAIN</p>
-            <h1>Roshani Foods &amp; Beverages</h1>
-            <p class="hero-subtext">Enjoy authentic biryani crafted with signature spice layering, slow-cooked aroma, and rich Mughlai depth in every bite.</p>
-            <div class="cta-row">
-                <a class="btn btn-primary" href="https://www.zomato.com" target="_blank" rel="noopener">Order on Zomato</a>
-                <a class="btn btn-ghost" href="https://www.swiggy.com" target="_blank" rel="noopener">Order on Swiggy</a>
-            </div>
-            <div class="meta-row">
-                <span>UDYAM: <?= htmlspecialchars($site['registrations']['udyam'] ?? '') ?></span>
-                <span>SANSTHA: <?= htmlspecialchars($site['registrations']['sansthaAadhaar'] ?? '') ?></span>
-            </div>
             <p class="scroll-hint">Scroll to explore</p>
         </div>
     </div>
