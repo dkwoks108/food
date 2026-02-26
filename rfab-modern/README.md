@@ -21,6 +21,16 @@ php -S 0.0.0.0:8080 -t public
 
 Then open `http://localhost:8080`.
 
+## Production smoke test
+
+Run a quick deployment verification for routes, video MIME, byte-range `206`, cache headers, gzip-off for video, and HTTP/2:
+
+```bash
+./scripts/production-smoke-test.sh https://your-domain.com /assets/video/Flow_delpmaspu222_1080p.mp4
+```
+
+If you omit the second argument, it defaults to `/assets/video/Flow_delpmaspu222_1080p.mp4`.
+
 ## Structure
 
 - `public/index.php` front controller
