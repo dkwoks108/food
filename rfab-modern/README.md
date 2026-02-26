@@ -54,5 +54,35 @@ If you omit the second argument, it defaults to `/assets/video/Flow_delpmaspu222
 On submit:
 - server-side validation via `Validator`
 - rate-limit check via `RateLimit`
-- logs stored to `storage/logs/contact-messages.log`
+- CSRF token validation + honeypot bot trap
+- stores to database table `contact_messages` when DB is configured
+- falls back to `storage/logs/contact-messages.log` if DB is unavailable
 - attempts email notification via PHP `mail()`
+
+## Database setup (hosting)
+
+Default configuration uses SQLite for easy hosting deploy.
+
+1) Initialize DB schema:
+
+```bash
+cd rfab-modern
+bash ./scripts/setup-db.sh
+```
+
+2) Optional environment variables:
+
+- `RFAB_DB_DRIVER=sqlite` (default) or `RFAB_DB_DRIVER=mysql`
+- `RFAB_DB_SQLITE_PATH=/absolute/path/app.sqlite`
+- `RFAB_DB_DSN="mysql:host=127.0.0.1;dbname=rfab;charset=utf8mb4"`
+- `RFAB_DB_USER="your_db_user"`
+- `RFAB_DB_PASS="your_db_password"`
+
+3) For MySQL hosting, create the table using SQL in `storage/database/schema.sql` (adjust `AUTOINCREMENT` to MySQL `AUTO_INCREMENT` if your panel does not auto-convert).
+
+## Security notes
+
+- Secure session cookie defaults (`HttpOnly`, `SameSite=Lax`, `Secure` on HTTPS)
+- Basic hardening headers via middleware
+- Contact form CSRF + rate limiting + validation limits
+- Mail header sanitization for contact notifications

@@ -12,6 +12,10 @@ class ContactController extends BaseController
 {
     public function index(array $params = []): string
     {
+        if (empty($_SESSION['contact_csrf'])) {
+            $_SESSION['contact_csrf'] = bin2hex(random_bytes(32));
+        }
+
         $flash = $_SESSION['contact_flash'] ?? null;
         $old = $_SESSION['contact_old'] ?? [];
         $errors = $_SESSION['contact_errors'] ?? [];
@@ -24,6 +28,7 @@ class ContactController extends BaseController
             'flash' => $flash,
             'old' => $old,
             'errors' => $errors,
+            'csrf' => $_SESSION['contact_csrf'],
         ]);
     }
 
@@ -31,6 +36,18 @@ class ContactController extends BaseController
     {
         if (!RateLimit::allow('contact_form', 5, 60)) {
             $_SESSION['contact_flash'] = ['type' => 'error', 'message' => 'Too many requests. Please try again in a minute.'];
+            $this->redirect('/contact');
+        }
+
+        $csrfToken = (string) ($_POST['csrf_token'] ?? '');
+        $sessionToken = (string) ($_SESSION['contact_csrf'] ?? '');
+        if ($sessionToken === '' || $csrfToken === '' || !hash_equals($sessionToken, $csrfToken)) {
+            $_SESSION['contact_flash'] = ['type' => 'error', 'message' => 'Invalid form session. Please try again.'];
+            $this->redirect('/contact');
+        }
+
+        if (trim((string) ($_POST['website'] ?? '')) !== '') {
+            $_SESSION['contact_flash'] = ['type' => 'success', 'message' => 'Thanks! Your message has been submitted successfully.'];
             $this->redirect('/contact');
         }
 
@@ -58,6 +75,7 @@ class ContactController extends BaseController
         (new Mailer())->sendContactNotification($payload, $config['contact_email']);
 
         $_SESSION['contact_flash'] = ['type' => 'success', 'message' => 'Thanks! Your message has been submitted successfully.'];
+        $_SESSION['contact_csrf'] = bin2hex(random_bytes(32));
         $this->redirect('/contact');
     }
 }

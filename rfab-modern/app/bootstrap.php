@@ -1,7 +1,30 @@
 <?php
 declare(strict_types=1);
 
+$isHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+    || (($_SERVER['SERVER_PORT'] ?? null) === '443')
+    || (($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https');
+
+session_set_cookie_params([
+    'lifetime' => 0,
+    'path' => '/',
+    'domain' => '',
+    'secure' => $isHttps,
+    'httponly' => true,
+    'samesite' => 'Lax',
+]);
+
+session_name('RFABSESSID');
 session_start();
+
+if (!headers_sent()) {
+    header_remove('X-Powered-By');
+}
+
+if (!isset($_SESSION['__session_regenerated'])) {
+    session_regenerate_id(true);
+    $_SESSION['__session_regenerated'] = time();
+}
 
 define('BASE_PATH', dirname(__DIR__));
 define('APP_ROOT', BASE_PATH . '/app');

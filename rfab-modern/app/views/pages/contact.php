@@ -28,6 +28,8 @@ declare(strict_types=1);
             <?php endif; ?>
 
             <form method="post" action="/contact" class="form-grid" novalidate>
+                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrf ?? '') ?>">
+                <input type="text" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                 <label>
                     First Name
                     <input type="text" name="first_name" value="<?= htmlspecialchars($old['first_name'] ?? '') ?>">

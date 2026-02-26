@@ -1,5 +1,7 @@
 <?php
 declare(strict_types=1);
+
+$waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''));
 ?>
 <section class="section page-hero">
     <div class="container">
@@ -15,7 +17,12 @@ declare(strict_types=1);
                 <h2><?= htmlspecialchars((string) $category) ?></h2>
                 <ul class="clean-list">
                     <?php foreach ($items as $item): ?>
-                        <li><?= htmlspecialchars($item['name']) ?></li>
+                        <?php $itemName = (string) ($item['name'] ?? ''); ?>
+                        <?php $waText = 'Hi Roshani Foods & Bevrages, I want to order ' . $itemName . '. Please share availability and price.'; ?>
+                        <li class="product-item">
+                            <span><?= htmlspecialchars($itemName) ?></span>
+                            <a class="btn btn-primary btn-small product-order-btn" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($waText) ?>" target="_blank" rel="noopener">Order</a>
+                        </li>
                     <?php endforeach; ?>
                 </ul>
             </article>

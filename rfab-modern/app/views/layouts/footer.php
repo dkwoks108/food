@@ -41,7 +41,7 @@ $waMessage = 'Hi Roshani Foods & Bevrages, I want to order authentic biryani. Pl
                     <a href="tel:<?= htmlspecialchars((string) preg_replace('/\D+/', '', (string) ($site['phone'] ?? ''))) ?>"><?= htmlspecialchars($site['phone'] ?? '') ?></a>
                 </li>
                 <li>
-                    <img width="32" height="32" src="https://img.icons8.com/3d-fluency/94/new-post.png" alt="mail icon">
+                    <img width="32" height="32" src="https://img.icons8.com/?size=100&id=OumT4lIcOllS&format=png&color=000000" alt="mail icon">
                     <a href="mailto:<?= htmlspecialchars($site['email'] ?? '') ?>"><?= htmlspecialchars($site['email'] ?? '') ?></a>
                 </li>
                 <li>
@@ -53,6 +53,9 @@ $waMessage = 'Hi Roshani Foods & Bevrages, I want to order authentic biryani. Pl
     </div>
     <div class="container legal-line">
         <small><?= htmlspecialchars($site['legal']['copyright'] ?? 'Copyright 2026') ?></small>
-        <small><?= htmlspecialchars($site['legal']['credit'] ?? '') ?></small>
+        <small>
+            Developed &amp; SEO Optimized by
+            <a href="https://www.veloxis.tech/" target="_blank" rel="noopener noreferrer">Veloxis Tech</a>
+        </small>
     </div>
 </footer>
