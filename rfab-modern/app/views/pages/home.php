@@ -3,21 +3,15 @@ declare(strict_types=1);
 
 $brandNames = array_values(array_map(static fn(array $brand): string => (string) ($brand['name'] ?? ''), $brands));
 ?>
-<section class="hero-video-section" id="hero-video">
+<section class="hero-video-section" id="hero-video"
+    data-frame-path="/assets/frames/biryani_"
+    data-frame-ext=".webp"
+    data-frame-count="60"
+    data-frame-w="1920"
+    data-frame-h="1080">
     <div class="hero-pin" data-hero-pin>
-        <img class="hero-poster" src="/assets/img/brand/covers/brand-1.jpeg" alt="RFAB Hero Poster" width="1920" height="1080" fetchpriority="high">
-        <video
-            class="hero-video"
-            preload="auto"
-            playsinline
-            muted
-            poster="/assets/img/brand/covers/brand-1.jpeg"
-            aria-label="RFAB cinematic biryani presentation"
-            data-desktop-src="/assets/video/Flow_delpmaspu222_4k.mp4"
-            data-mobile-src="/assets/video/Flow_delpmaspu222_1080p.mp4"
-        >
-            <source src="/assets/video/Flow_delpmaspu222_4k.mp4" type="video/mp4">
-        </video>
+        <canvas class="hero-canvas" aria-label="RFAB cinematic biryani presentation"></canvas>
+        <img class="hero-poster" src="/assets/frames/biryani_0001.webp" alt="RFAB Hero Poster" width="1920" height="1080" fetchpriority="high">
 
         <div class="hero-overlay" aria-hidden="true"></div>
 
