@@ -19,18 +19,13 @@ $metaDescription = $metaDescription ?? ($site['seo']['description'] ?? 'Premium 
 </head>
 <body class="no-js">
 <?php require APP_ROOT . '/views/layouts/header.php'; ?>
-<div id="smooth-wrapper">
-    <div id="smooth-content">
-        <main id="main-content" tabindex="-1">
-            <?= $content ?>
-        </main>
-        <?php require APP_ROOT . '/views/layouts/footer.php'; ?>
-    </div>
-</div>
+<main id="main-content" tabindex="-1">
+    <?= $content ?>
+</main>
+<?php require APP_ROOT . '/views/layouts/footer.php'; ?>
 <?php require APP_ROOT . '/views/partials/whatsapp-float.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap-trial@3.12.5/dist/ScrollSmoother.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 <script src="/assets/js/app.min.js" defer></script>
 </body>
