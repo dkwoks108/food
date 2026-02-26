@@ -15,7 +15,7 @@ abstract class BaseController
 
         return View::render($page, array_merge($data, [
             'site' => $site,
-            'currentPath' => parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/',
+            'currentPath' => $this->currentPath(),
         ]));
     }
 
@@ -23,5 +23,30 @@ abstract class BaseController
     {
         header('Location: ' . $path);
         exit;
+    }
+
+    private function currentPath(): string
+    {
+        $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+        $path = rawurldecode($path);
+
+        $scriptName = str_replace('\\', '/', (string) ($_SERVER['SCRIPT_NAME'] ?? ''));
+        $scriptDir = str_replace('\\', '/', dirname($scriptName));
+
+        if ($scriptDir !== '/' && $scriptDir !== '.' && str_starts_with($path, $scriptDir . '/')) {
+            $path = substr($path, strlen($scriptDir));
+        }
+
+        if ($path === '/index.php') {
+            $path = '/';
+        } elseif (str_starts_with($path, '/index.php/')) {
+            $path = substr($path, strlen('/index.php'));
+        }
+
+        if ($path !== '/' && str_ends_with($path, '/')) {
+            $path = rtrim($path, '/');
+        }
+
+        return $path === '' ? '/' : $path;
     }
 }

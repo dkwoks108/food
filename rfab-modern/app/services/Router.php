@@ -26,6 +26,21 @@ class Router
 
     private function normalizePath(string $path): string
     {
+        $path = rawurldecode($path);
+
+        $scriptName = str_replace('\\', '/', (string) ($_SERVER['SCRIPT_NAME'] ?? ''));
+        $scriptDir = str_replace('\\', '/', dirname($scriptName));
+
+        if ($scriptDir !== '/' && $scriptDir !== '.' && str_starts_with($path, $scriptDir . '/')) {
+            $path = substr($path, strlen($scriptDir));
+        }
+
+        if ($path === '/index.php') {
+            $path = '/';
+        } elseif (str_starts_with($path, '/index.php/')) {
+            $path = substr($path, strlen('/index.php'));
+        }
+
         if ($path !== '/' && str_ends_with($path, '/')) {
             $path = rtrim($path, '/');
         }
