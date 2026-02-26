@@ -26,8 +26,8 @@ $brandNames = array_values(array_map(static fn(array $brand): string => (string)
             <h1>Roshani Foods &amp; Beverages</h1>
             <p class="hero-subtext">Authentic biryani flavor, layered aroma, and signature craftsmanship in every serving.</p>
             <div class="cta-row">
-                <a class="btn btn-primary" href="https://www.zomato.com" target="_blank" rel="noopener">Order on Zomato</a>
-                <a class="btn btn-ghost" href="https://www.swiggy.com" target="_blank" rel="noopener">Order on Swiggy</a>
+                <a class="btn btn-primary" href="<?= htmlspecialchars($site['links']['zomato'] ?? 'https://www.zomato.com') ?>" target="_blank" rel="noopener">Order on Zomato</a>
+                <a class="btn btn-ghost" href="<?= htmlspecialchars($site['links']['swiggy'] ?? 'https://www.swiggy.com') ?>" target="_blank" rel="noopener">Order on Swiggy</a>
             </div>
             <div class="meta-row">
                 <span>UDYAM: <?= htmlspecialchars($site['registrations']['udyam'] ?? '') ?></span>
