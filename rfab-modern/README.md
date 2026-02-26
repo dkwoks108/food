@@ -31,6 +31,14 @@ Run a quick deployment verification for routes, video MIME, byte-range `206`, ca
 
 If you omit the second argument, it defaults to `/assets/video/Flow_delpmaspu222_1080p.mp4`.
 
+## Hero video implementation
+
+- Built with `GSAP` + `ScrollTrigger` (no framework assumptions).
+- Uses dual MP4 sources selected by viewport (`4K` desktop, `1080p` mobile) before scroll-scrub initialization.
+- Initializes only after `loadedmetadata` / `loadeddata` to prevent first-scroll jumps.
+- Maps scroll progress to video `currentTime` with GSAP `quickTo(..., { ease: 'none' })` smoothing.
+- Applies fallback to poster/static hero when `prefers-reduced-motion` is enabled or device memory/data-saver is constrained.
+
 ## Structure
 
 - `public/index.php` front controller

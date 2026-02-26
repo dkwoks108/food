@@ -60,7 +60,6 @@ done
 
 echo
 video_headers="$(curl -sSI "$BASE_URL$VIDEO_PATH")"
-status_line="$(printf '%s\n' "$video_headers" | head -n1 | tr -d '\r')"
 content_type="$(printf '%s\n' "$video_headers" | awk -F': ' 'BEGIN{IGNORECASE=1} $1=="Content-Type"{print $2}' | tr -d '\r')"
 cache_control="$(printf '%s\n' "$video_headers" | awk -F': ' 'BEGIN{IGNORECASE=1} $1=="Cache-Control"{print $2}' | tr -d '\r')"
 accept_ranges="$(printf '%s\n' "$video_headers" | awk -F': ' 'BEGIN{IGNORECASE=1} $1=="Accept-Ranges"{print $2}' | tr -d '\r')"
@@ -108,11 +107,11 @@ else
 fi
 
 echo
-http2_status="$(curl -sSI --http2 "$BASE_URL" | head -n1 | tr -d '\r' || true)"
-if [[ "$http2_status" =~ HTTP/2 ]]; then
+http_version="$(curl -sS -o /dev/null -w "%{http_version}" "$BASE_URL/" || true)"
+if [[ "$http_version" == "2" ]]; then
   pass "HTTP/2 is enabled"
 else
-  fail "HTTP/2 not detected (first line: '$http2_status')"
+  fail "HTTP/2 not detected (reported protocol version: '$http_version')"
 fi
 
 echo
