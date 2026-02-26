@@ -10,6 +10,7 @@ $brandCoverImages = [
     '/assets/img/brand/covers/Biryani Junction.jpeg',
     '/assets/img/brand/covers/Biryani Farm.jpeg',
     '/assets/img/brand/covers/House of Biryani.jpeg',
+    '/assets/img/brand/covers/The earthen pot biryani.jpeg',
 ];
 
 $featuredChefs = array_slice($chefs, 0, 2);

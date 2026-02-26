@@ -78,5 +78,15 @@
       "zomato": "https://zomato.onelink.me/xqzv/gbubxzqj",
       "swiggy": "https://www.swiggy.com/direct/brand/261474?source=swiggy-direct&subSource=generic"
     }
+  },
+  {
+    "id": "the-earthen-pot-biryani",
+    "name": "The earthen pot biryani",
+    "fssaiNo": "",
+    "description": "",
+    "platforms": {
+      "zomato": "#",
+      "swiggy": ""
+    }
   }
 ]
