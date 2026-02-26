@@ -30,7 +30,7 @@ $metaDescription = $metaDescription ?? ($site['seo']['description'] ?? 'Premium 
 <?php require APP_ROOT . '/views/partials/whatsapp-float.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap-trial@3.12.5/dist/ScrollSmoother.min.js" defer></script>
+<script src="/assets/js/vendors/ScrollSmoother.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 <script src="/assets/js/app.min.js" defer></script>
 </body>
