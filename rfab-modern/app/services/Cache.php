@@ -10,7 +10,11 @@ class Cache
         $file = STORAGE_ROOT . '/cache/data/' . md5($key) . '.cache';
 
         if (is_file($file) && (time() - filemtime($file)) < $ttl) {
-            return unserialize((string) file_get_contents($file));
+            $raw = (string) file_get_contents($file);
+            $value = @unserialize($raw, ['allowed_classes' => false]);
+            if ($value !== false || $raw === serialize(false)) {
+                return $value;
+            }
         }
 
         $value = $resolver();
