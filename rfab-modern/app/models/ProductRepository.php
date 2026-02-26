@@ -18,7 +18,15 @@ class ProductRepository extends JsonRepository
             $groups[$category][] = $item;
         }
 
-        ksort($groups);
+        uksort($groups, static function (string $a, string $b) use ($groups): int {
+            $countDiff = count($groups[$b]) <=> count($groups[$a]);
+            if ($countDiff !== 0) {
+                return $countDiff;
+            }
+
+            return strcasecmp($a, $b);
+        });
+
         return $groups;
     }
 }

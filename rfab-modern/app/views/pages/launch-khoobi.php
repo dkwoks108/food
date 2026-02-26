@@ -10,13 +10,13 @@ $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''
             <p class="eyebrow">New Launch</p>
             <h1>Khoobi Alkaline Water</h1>
             <p>Khoobi Alkaline Water is available in 200ml and 1L bottle packing, created for clean daily hydration and a smooth, refreshing taste.</p>
-            <ul class="chip-list" aria-label="Khoobi highlights">
+            <ul class="chip-list khoobi-highlights" aria-label="Khoobi highlights">
                 <li>200ml &amp; 1L Pack Sizes</li>
                 <li>pH 8.5 to 10.5</li>
                 <li>BPA Free</li>
                 <li>100% Recyclable Bottle</li>
             </ul>
-            <div class="cta-row">
+            <div class="cta-row khoobi-actions">
                 <a class="btn btn-primary" href="/contact">Inquire Now</a>
                 <a class="btn btn-ghost" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($khoobiWaMessage) ?>" target="_blank" rel="noopener">WhatsApp for Khoobi</a>
             </div>
