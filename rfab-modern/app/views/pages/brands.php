@@ -21,7 +21,7 @@ $brandCoverImages = [
 </section>
 
 <section class="section">
-    <div class="container card-grid">
+    <div class="container card-grid brands-page-grid">
         <?php foreach ($brands as $index => $brand): ?>
             <?php $cover = $brandCoverImages[$index] ?? '/assets/img/brand/covers/House of Biryani.jpeg'; ?>
             <article class="card reveal">

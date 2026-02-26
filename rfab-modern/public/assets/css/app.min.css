@@ -18,6 +18,14 @@
 .product-order-btn{white-space:nowrap;min-width:88px;justify-content:center}
 .legal-line a{color:var(--gold)}
 .reviews-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.faq-section{padding-top:1.8rem}
+.faq-list{display:grid;gap:.75rem}
+.faq-item summary{cursor:pointer;font-weight:650;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item p{margin-top:.65rem;color:var(--muted)}
+.khoobi-bottle{background:linear-gradient(180deg,rgba(31,182,255,.26),rgba(98,230,197,.2)),url('/assets/img/brand/covers/Alkaline_water_bottle_pack_a7d252305d.jpeg') center/cover no-repeat}
+.khoobi-info-grid{gap:1rem}
+@media (min-width:1025px){.hero-pin::after{content:'';position:absolute;right:1rem;bottom:1rem;width:108px;height:44px;border-radius:999px;background:rgba(230,239,255,.24);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:4;pointer-events:none}.brands-page-grid{max-width:960px}.brands-page-grid .card{padding:.8rem}.brands-page-grid .brand-page-cover{height:170px;aspect-ratio:auto}}
 @media (max-width:760px){.brand-mark img{height:44px}}
 @media (max-width:1024px){.reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:760px){.card-grid.small-grid{gap:.75rem}.brand-page-cover,.chef-photo{margin-bottom:.7rem;border-radius:.7rem}.home-brand-cover{height:220px}.hero-poster{object-position:center center}.khoobi-layout .cta-row{justify-content:flex-start}.product-item{align-items:flex-start;flex-direction:column}.product-order-btn{width:100%}.reviews-grid{grid-template-columns:1fr;gap:.85rem}}
+@media (max-width:760px){.card-grid.small-grid{gap:.75rem}.brand-page-cover,.chef-photo{margin-bottom:.7rem;border-radius:.7rem}.home-brand-cover{height:220px}.hero-poster{object-position:center center}.khoobi-layout .cta-row{justify-content:flex-start}.khoobi-bottle{height:230px}.khoobi-info-grid{grid-template-columns:1fr;gap:.75rem}.product-item{align-items:flex-start;flex-direction:column}.product-order-btn{width:100%}.reviews-grid{grid-template-columns:1fr;gap:.85rem}}

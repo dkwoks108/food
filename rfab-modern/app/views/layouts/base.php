@@ -22,6 +22,7 @@ $metaDescription = $metaDescription ?? ($site['seo']['description'] ?? 'Premium 
 <main id="main-content" tabindex="-1">
     <?= $content ?>
 </main>
+<?php require APP_ROOT . '/views/partials/faq-section.php'; ?>
 <?php require APP_ROOT . '/views/layouts/footer.php'; ?>
 <?php require APP_ROOT . '/views/partials/whatsapp-float.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>

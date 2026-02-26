@@ -26,7 +26,7 @@ $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''
 </section>
 
 <section class="section">
-    <div class="container card-grid small-grid">
+    <div class="container card-grid small-grid khoobi-info-grid">
         <article class="card reveal">
             <h2>About Khoobi</h2>
             <p>Khoobi Alkaline Water is built for modern, health-aware lifestyles. With a balanced alkaline pH range and strict quality-focused production, it supports everyday hydration at home, office, gym, travel, and on-the-go moments.</p>
