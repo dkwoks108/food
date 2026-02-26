@@ -1,8 +1,11 @@
 <?php
 declare(strict_types=1);
+
+$khoobiWaMessage = 'Hi Roshani Foods & Bevrages, I want inquiry for Khoobi Alkaline Water. Please share pricing and availability for 200ml and 1L bottles.';
+$waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''));
 ?>
 <section class="section page-hero khoobi-hero">
-    <div class="container split">
+    <div class="container split khoobi-layout">
         <div>
             <p class="eyebrow">New Launch</p>
             <h1>Khoobi Alkaline Water</h1>
@@ -13,7 +16,10 @@ declare(strict_types=1);
                 <li>BPA Free</li>
                 <li>100% Recyclable Bottle</li>
             </ul>
-            <a class="btn btn-primary" href="/contact">Inquire Now</a>
+            <div class="cta-row">
+                <a class="btn btn-primary" href="/contact">Inquire Now</a>
+                <a class="btn btn-ghost" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($khoobiWaMessage) ?>" target="_blank" rel="noopener">WhatsApp for Khoobi</a>
+            </div>
         </div>
         <div class="khoobi-bottle" aria-hidden="true"></div>
     </div>
@@ -32,6 +38,14 @@ declare(strict_types=1);
         <article class="card reveal">
             <h2>Why Choose Khoobi Alkaline</h2>
             <p>Choose Khoobi for dependable quality, clean taste, and practical packaging designed for every routine. Whether you need quick hydration or full-day water intake, Khoobi gives a trusted premium alkaline option.</p>
+        </article>
+        <article class="card reveal">
+            <h2>Packaging &amp; Usage</h2>
+            <p>The 200ml pack is ideal for quick hydration and events, while the 1L bottle is suitable for daily personal use at home and office. Both are easy to carry and designed for freshness retention.</p>
+        </article>
+        <article class="card reveal">
+            <h2>Quality Commitment</h2>
+            <p>Khoobi follows hygiene-first production standards with reliable filtration and quality checks. Every bottle is BPA-free and recyclable to support both health and responsible consumption.</p>
         </article>
     </div>
 </section>

@@ -1,5 +1,7 @@
 <?php
 declare(strict_types=1);
+
+$waMessage = 'Hi Roshani Foods & Bevrages, I want to order authentic biryani. Please share today’s menu and prices.';
 ?>
 <footer class="site-footer">
     <div class="container footer-grid">
@@ -13,7 +15,7 @@ declare(strict_types=1);
                 <a href="<?= htmlspecialchars($site['social']['facebook'] ?? '#') ?>" aria-label="Facebook" target="_blank" rel="noopener">
                     <img width="40" height="40" src="https://img.icons8.com/?size=100&id=jZ0kw76QEzJU&format=png&color=000000" alt="facebook">
                 </a>
-                <a href="https://wa.me/<?= htmlspecialchars((string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''))) ?>" aria-label="WhatsApp" target="_blank" rel="noopener">
+                <a href="https://wa.me/<?= htmlspecialchars((string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''))) ?>?text=<?= rawurlencode($waMessage) ?>" aria-label="WhatsApp" target="_blank" rel="noopener">
                     <img width="40" height="40" src="https://img.icons8.com/?size=100&id=DUEq8l5qTqBE&format=png&color=000000" alt="whatsapp">
                 </a>
             </div>
@@ -39,7 +41,7 @@ declare(strict_types=1);
                     <a href="tel:<?= htmlspecialchars((string) preg_replace('/\D+/', '', (string) ($site['phone'] ?? ''))) ?>"><?= htmlspecialchars($site['phone'] ?? '') ?></a>
                 </li>
                 <li>
-                    <img width="32" height="32" src="https://img.icons8.com/3d-fluency/94/new-post.png" alt="email">
+                    <img width="32" height="32" src="https://img.icons8.com/3d-fluency/94/new-post.png" alt="mail icon">
                     <a href="mailto:<?= htmlspecialchars($site['email'] ?? '') ?>"><?= htmlspecialchars($site['email'] ?? '') ?></a>
                 </li>
                 <li>
@@ -47,8 +49,6 @@ declare(strict_types=1);
                     <span><?= htmlspecialchars($site['address'] ?? '') ?></span>
                 </li>
             </ul>
-            <h4>Newsletter</h4>
-            <?php require APP_ROOT . '/views/partials/newsletter-form.php'; ?>
         </section>
     </div>
     <div class="container legal-line">
