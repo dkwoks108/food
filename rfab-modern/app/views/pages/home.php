@@ -35,10 +35,6 @@ $chefImages = [
             <p class="eyebrow">THE AUTHENTIC CLOUD KITCHEN CHAIN</p>
             <h1>Roshani Foods &amp; Beverages</h1>
             <p class="hero-subtext">Authentic biryani flavor, layered aroma, and signature craftsmanship in every serving.</p>
-            <div class="cta-row">
-                <a class="btn btn-primary" href="<?= htmlspecialchars($site['links']['zomato'] ?? 'https://www.zomato.com') ?>" target="_blank" rel="noopener">Order on Zomato</a>
-                <a class="btn btn-ghost" href="<?= htmlspecialchars($site['links']['swiggy'] ?? 'https://www.swiggy.com') ?>" target="_blank" rel="noopener">Order on Swiggy</a>
-            </div>
             <div class="meta-row">
                 <span>UDYAM: <?= htmlspecialchars($site['registrations']['udyam'] ?? '') ?></span>
                 <span>SANSTHA: <?= htmlspecialchars($site['registrations']['sansthaAadhaar'] ?? '') ?></span>
@@ -83,6 +79,8 @@ $chefImages = [
             <h2>Our Story</h2>
             <p>We blend handpicked spices, premium ingredients, and slow-cooked layering to deliver authentic biryani experiences with consistent quality.</p>
             <p>From smoky aroma to balanced richness, every bowl is crafted to celebrate heritage and modern taste expectations.</p>
+            <p>Our store journey began with one vision: bring authentic biryani craftsmanship to every family with dependable taste, hygiene-first preparation, and warm service at every order touchpoint.</p>
+            <p>Today, our multi-brand kitchen model helps food lovers choose from diverse biryani styles while keeping consistency, portion quality, and signature aroma at the core of every meal.</p>
         </div>
         <div class="story-image" role="img" aria-label="Chicken biryani in brass handi"></div>
     </div>
