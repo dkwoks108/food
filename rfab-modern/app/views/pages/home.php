@@ -2,6 +2,23 @@
 declare(strict_types=1);
 
 $brandNames = array_values(array_map(static fn(array $brand): string => (string) ($brand['name'] ?? ''), $brands));
+$brandCoverImages = [
+    '/assets/img/brand/covers/House of Biryani.jpeg',
+    '/assets/img/brand/covers/Handi Biryani.jpeg',
+    '/assets/img/brand/covers/Biryani Junction.jpeg',
+    '/assets/img/brand/covers/Biryani Farm.jpeg',
+    '/assets/img/brand/covers/Biryani King.jpeg',
+    '/assets/img/brand/covers/Biryaniwala\'s.jpeg',
+    '/assets/img/brand/covers/Kulhad Biryani.jpeg',
+    '/assets/img/brand/covers/Matka Biryani.jpeg',
+    '/assets/img/brand/covers/The earthen pot biryani.jpeg',
+];
+
+$featuredChefs = array_slice($chefs, 0, 2);
+$chefImages = [
+    '/assets/img/chefs/CHANDAN SINGH.jpeg',
+    '/assets/img/chefs/BILLU YADAV.jpeg',
+];
 ?>
 <section class="hero-video-section" id="hero-video"
     data-frame-path="/assets/frames/biryani_"
@@ -49,8 +66,9 @@ $brandNames = array_values(array_map(static fn(array $brand): string => (string)
         <div class="brands-grid">
             <?php for ($i = 1; $i <= 9; $i++): ?>
                 <?php $name = $brandNames[$i - 1] ?? ('Brand ' . $i); ?>
+                <?php $cover = $brandCoverImages[$i - 1] ?? '/assets/img/brand/covers/House of Biryani.jpeg'; ?>
                 <article class="brand-card reveal">
-                    <img src="/assets/img/brand/covers/brand-1.jpeg" alt="<?= htmlspecialchars($name) ?>" loading="lazy" width="720" height="720">
+                    <img class="brand-cover-image" src="<?= htmlspecialchars($cover) ?>" alt="<?= htmlspecialchars($name) ?>" loading="lazy" width="720" height="720">
                     <div class="brand-card-body">
                         <h3><?= htmlspecialchars($name) ?></h3>
                     </div>
@@ -67,7 +85,7 @@ $brandNames = array_values(array_map(static fn(array $brand): string => (string)
             <p>We blend handpicked spices, premium ingredients, and slow-cooked layering to deliver authentic biryani experiences with consistent quality.</p>
             <p>From smoky aroma to balanced richness, every bowl is crafted to celebrate heritage and modern taste expectations.</p>
         </div>
-        <div class="story-image" role="img" aria-label="Biryani bowl visual"></div>
+        <div class="story-image" role="img" aria-label="Chicken biryani in brass handi"></div>
     </div>
 </section>
 
@@ -84,9 +102,10 @@ $brandNames = array_values(array_map(static fn(array $brand): string => (string)
         <div>
             <h2>Featured Chefs</h2>
             <div class="card-grid small-grid">
-                <?php foreach ($chefs as $chef): ?>
+                <?php foreach ($featuredChefs as $index => $chef): ?>
+                    <?php $chefImage = $chefImages[$index] ?? '/assets/img/chefs/CHANDAN SINGH.jpeg'; ?>
                     <article class="card chef-card reveal">
-                        <div class="avatar"></div>
+                        <img class="chef-photo" src="<?= htmlspecialchars($chefImage) ?>" alt="<?= htmlspecialchars($chef['name']) ?>" loading="lazy" width="400" height="260">
                         <h3><?= htmlspecialchars($chef['name']) ?></h3>
                     </article>
                 <?php endforeach; ?>

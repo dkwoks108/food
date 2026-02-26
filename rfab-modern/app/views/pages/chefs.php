@@ -1,5 +1,11 @@
 <?php
 declare(strict_types=1);
+
+$featuredChefs = array_slice($chefs, 0, 2);
+$chefImages = [
+    '/assets/img/chefs/CHANDAN SINGH.jpeg',
+    '/assets/img/chefs/BILLU YADAV.jpeg',
+];
 ?>
 <section class="section page-hero">
     <div class="container">
@@ -10,9 +16,10 @@ declare(strict_types=1);
 
 <section class="section">
     <div class="container card-grid small-grid">
-        <?php foreach ($chefs as $chef): ?>
+        <?php foreach ($featuredChefs as $index => $chef): ?>
+            <?php $chefImage = $chefImages[$index] ?? '/assets/img/chefs/CHANDAN SINGH.jpeg'; ?>
             <article class="card chef-card reveal">
-                <div class="avatar"></div>
+                <img class="chef-photo" src="<?= htmlspecialchars($chefImage) ?>" alt="<?= htmlspecialchars($chef['name']) ?>" loading="lazy" width="400" height="260">
                 <h2><?= htmlspecialchars($chef['name']) ?></h2>
             </article>
         <?php endforeach; ?>

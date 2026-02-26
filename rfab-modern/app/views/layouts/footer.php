@@ -11,7 +11,10 @@ declare(strict_types=1);
                     <img width="40" height="40" src="https://img.icons8.com/3d-fluency/94/instagram-new.png" alt="instagram-new">
                 </a>
                 <a href="<?= htmlspecialchars($site['social']['facebook'] ?? '#') ?>" aria-label="Facebook" target="_blank" rel="noopener">
-                    <img width="40" height="40" src="https://img.icons8.com/3d-fluency/94/facebook-new.png" alt="facebook-new">
+                    <img width="40" height="40" src="https://img.icons8.com/?size=100&id=jZ0kw76QEzJU&format=png&color=000000" alt="facebook">
+                </a>
+                <a href="https://wa.me/<?= htmlspecialchars((string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''))) ?>" aria-label="WhatsApp" target="_blank" rel="noopener">
+                    <img width="40" height="40" src="https://img.icons8.com/?size=100&id=DUEq8l5qTqBE&format=png&color=000000" alt="whatsapp">
                 </a>
             </div>
         </section>

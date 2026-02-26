@@ -6,7 +6,7 @@ declare(strict_types=1);
         <div>
             <p class="eyebrow">New Launch</p>
             <h1>Khoobi Alkaline Water</h1>
-            <p>Premium daily hydration with balanced alkalinity, clean taste, and dependable quality standards for modern lifestyles.</p>
+            <p>Khoobi Alkaline Water is available in 200ml and 1L bottle packing, created for clean daily hydration and a smooth, refreshing taste.</p>
             <ul class="chip-list" aria-label="Khoobi highlights">
                 <li>200ml &amp; 1L Pack Sizes</li>
                 <li>pH 8.5 to 10.5</li>
@@ -23,15 +23,15 @@ declare(strict_types=1);
     <div class="container card-grid small-grid">
         <article class="card reveal">
             <h2>About Khoobi</h2>
-            <p>Khoobi Alkaline Water is crafted for people who want dependable hydration every day. It combines quality processing with a refreshing taste profile and practical packaging for home, travel, and work routines.</p>
+            <p>Khoobi Alkaline Water is built for modern, health-aware lifestyles. With a balanced alkaline pH range and strict quality-focused production, it supports everyday hydration at home, office, gym, travel, and on-the-go moments.</p>
         </article>
         <article class="card reveal">
             <h2>Benefits</h2>
-            <p>Balanced alkaline pH (8.5 to 10.5), BPA-free packaging, and 100% recyclable bottles make Khoobi a smart hydration companion for wellness-focused families and active professionals.</p>
+            <p>Balanced pH (8.5 to 10.5), BPA-free bottles, and 100% recyclable packaging combine safety, convenience, and sustainability. The two pack sizes (200ml and 1L) help you stay consistently hydrated throughout the day.</p>
         </article>
         <article class="card reveal">
             <h2>Why Choose Khoobi Alkaline</h2>
-            <p>Choose Khoobi for consistency, clean taste, and confidence in packaging quality—available in both 200ml and 1L variants to match quick sips and full-day hydration needs.</p>
+            <p>Choose Khoobi for dependable quality, clean taste, and practical packaging designed for every routine. Whether you need quick hydration or full-day water intake, Khoobi gives a trusted premium alkaline option.</p>
         </article>
     </div>
 </section>
@@ -43,7 +43,8 @@ declare(strict_types=1);
             SM AQUA PURE<br>
             93, Lane No 5<br>
             Moti Nagar<br>
-            Vaishali Nagar, Jaipur 302021
+            Vaishali Nagar Jaipur 302021
         </p>
+        <p>For more details or business inquiries, please contact our team.</p>
     </div>
 </section>

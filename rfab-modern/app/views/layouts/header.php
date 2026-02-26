@@ -14,8 +14,7 @@ $menu = [
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="container nav-wrap">
         <a href="/" class="brand-mark" aria-label="RFAB Home">
-            <span class="logo-dot"></span>
-            <span><?= htmlspecialchars($site['brandName'] ?? 'RFAB') ?></span>
+            <img src="/assets/img/brand/logos/logo.jpeg" alt="RFAB official logo" width="140" height="56">
         </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">Menu</button>
         <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
