@@ -1,32 +1,82 @@
 [
   {
-    "id": "house-of-biryani",
-    "name": "The House of Biryani",
-    "fssaiNo": "10021022000111",
-    "description": "Royal dum biryani crafted with layered spice balance.",
+    "id": "kulhad-biryani",
+    "name": "Kulhad Biryani",
+    "fssaiNo": "22225083000696",
+    "description": "",
     "platforms": {
-      "zomato": "https://zomato.com",
-      "swiggy": "https://swiggy.com"
+      "zomato": "https://zomato.onelink.me/xqzv/tw1clgrm",
+      "swiggy": "https://www.swiggy.com/direct/brand/361186?source=swiggy-direct&subSource=generic"
+    }
+  },
+  {
+    "id": "matka-biryani",
+    "name": "Matka Biryani",
+    "fssaiNo": "22225083000697",
+    "description": "",
+    "platforms": {
+      "zomato": "https://zomato.onelink.me/xqzv/wy59wspg",
+      "swiggy": ""
+    }
+  },
+  {
+    "id": "biryaniwalas",
+    "name": "Biryaniwala's",
+    "fssaiNo": "22225083000698",
+    "description": "",
+    "platforms": {
+      "zomato": "https://zomato.onelink.me/xqzv/wy59wspg",
+      "swiggy": ""
+    }
+  },
+  {
+    "id": "biryani-king",
+    "name": "Biryani King",
+    "fssaiNo": "22225112000692",
+    "description": "",
+    "platforms": {
+      "zomato": "https://zomato.onelink.me/xqzv/k3p4zmxl",
+      "swiggy": "https://www.swiggy.com/direct/brand/1573?source=swiggy-direct&subSource=generic"
     }
   },
   {
     "id": "handi-biryani",
     "name": "Handi Biryani",
-    "fssaiNo": "10021022000112",
-    "description": "Slow-cooked handi richness with signature aroma.",
+    "fssaiNo": "22225112000697",
+    "description": "",
     "platforms": {
-      "zomato": "https://zomato.com",
-      "swiggy": "https://swiggy.com"
+      "zomato": "https://zomato.onelink.me/xqzv/rm9zxf3m",
+      "swiggy": "https://www.swiggy.com/direct/brand/4015?source=swiggy-direct&subSource=generic"
     }
   },
   {
     "id": "biryani-junction",
     "name": "Biryani Junction",
-    "fssaiNo": "10021022000113",
-    "description": "Bold flavors for modern biryani lovers.",
+    "fssaiNo": "22225112000691",
+    "description": "",
     "platforms": {
-      "zomato": "https://zomato.com",
-      "swiggy": ""
+      "zomato": "https://zomato.onelink.me/xqzv/s5poliuq",
+      "swiggy": "https://www.swiggy.com/direct/brand/3833?source=swiggy-direct&subSource=generic"
+    }
+  },
+  {
+    "id": "biryani-farm",
+    "name": "Biryani Farm",
+    "fssaiNo": "22225112000694",
+    "description": "",
+    "platforms": {
+      "zomato": "https://zomato.onelink.me/xqzv/35lsjjwz",
+      "swiggy": "https://www.swiggy.com/direct/brand/11686?source=swiggy-direct&subSource=generic"
+    }
+  },
+  {
+    "id": "the-house-of-biryani",
+    "name": "The House of Biryani",
+    "fssaiNo": "22225112000693",
+    "description": "",
+    "platforms": {
+      "zomato": "https://zomato.onelink.me/xqzv/gbubxzqj",
+      "swiggy": "https://www.swiggy.com/direct/brand/261474?source=swiggy-direct&subSource=generic"
     }
   }
 ]

@@ -5,5 +5,6 @@
 .chef-photo{display:block;width:100%;aspect-ratio:1/1;height:auto;border-radius:.8rem;object-fit:cover;object-position:center 12%;margin-bottom:.8rem}
 .story-image{background:linear-gradient(130deg,var(--glow-gold),var(--glow-red)),url('/assets/img/ui/Chicken_biryani_in_brass_handi_dc029039da.jpeg') center/cover no-repeat}
 .social-icons img{border-radius:.5rem;background:#fff;padding:3px}
+.btn-disabled{opacity:.55;cursor:not-allowed;pointer-events:none}
 @media (max-width:760px){.brand-mark img{height:44px}}
 @media (max-width:760px){.card-grid.small-grid{gap:.75rem}.brand-page-cover,.chef-photo{margin-bottom:.7rem;border-radius:.7rem}}

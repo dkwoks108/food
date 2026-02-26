@@ -2,15 +2,14 @@
 declare(strict_types=1);
 
 $brandCoverImages = [
-    '/assets/img/brand/covers/House of Biryani.jpeg',
+    '/assets/img/brand/covers/Kulhad Biryani.jpeg',
+    '/assets/img/brand/covers/Matka Biryani.jpeg',
+    '/assets/img/brand/covers/Biryaniwala\'s.jpeg',
+    '/assets/img/brand/covers/Biryani King.jpeg',
     '/assets/img/brand/covers/Handi Biryani.jpeg',
     '/assets/img/brand/covers/Biryani Junction.jpeg',
     '/assets/img/brand/covers/Biryani Farm.jpeg',
-    '/assets/img/brand/covers/Biryani King.jpeg',
-    '/assets/img/brand/covers/Biryaniwala\'s.jpeg',
-    '/assets/img/brand/covers/Kulhad Biryani.jpeg',
-    '/assets/img/brand/covers/Matka Biryani.jpeg',
-    '/assets/img/brand/covers/The earthen pot biryani.jpeg',
+    '/assets/img/brand/covers/House of Biryani.jpeg',
 ];
 ?>
 <section class="section page-hero">
@@ -28,11 +27,12 @@ $brandCoverImages = [
                 <img class="brand-page-cover" src="<?= htmlspecialchars($cover) ?>" alt="<?= htmlspecialchars($brand['name']) ?>" loading="lazy" width="1080" height="1080">
                 <h2><?= htmlspecialchars($brand['name']) ?></h2>
                 <p class="muted">FSSAI NO: <?= htmlspecialchars($brand['fssaiNo']) ?></p>
-                <p><?= htmlspecialchars($brand['description'] ?? '') ?></p>
                 <div class="cta-row">
                     <a class="btn btn-primary btn-small" href="<?= htmlspecialchars($brand['platforms']['zomato'] ?? '#') ?>" target="_blank" rel="noopener">ZOMATO</a>
                     <?php if (!empty($brand['platforms']['swiggy'])): ?>
                         <a class="btn btn-ghost btn-small" href="<?= htmlspecialchars($brand['platforms']['swiggy']) ?>" target="_blank" rel="noopener">SWIGGY</a>
+                    <?php else: ?>
+                        <span class="btn btn-ghost btn-small btn-disabled" aria-disabled="true">SWIGGY</span>
                     <?php endif; ?>
                 </div>
             </article>
