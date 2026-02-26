@@ -25,7 +25,7 @@ $brandCoverImages = [
         <?php foreach ($brands as $index => $brand): ?>
             <?php $cover = $brandCoverImages[$index] ?? '/assets/img/brand/covers/House of Biryani.jpeg'; ?>
             <article class="card reveal">
-                <img class="brand-page-cover" src="<?= htmlspecialchars($cover) ?>" alt="<?= htmlspecialchars($brand['name']) ?>" loading="lazy" width="720" height="480">
+                <img class="brand-page-cover" src="<?= htmlspecialchars($cover) ?>" alt="<?= htmlspecialchars($brand['name']) ?>" loading="lazy" width="1080" height="1080">
                 <h2><?= htmlspecialchars($brand['name']) ?></h2>
                 <p class="muted">FSSAI NO: <?= htmlspecialchars($brand['fssaiNo']) ?></p>
                 <p><?= htmlspecialchars($brand['description'] ?? '') ?></p>

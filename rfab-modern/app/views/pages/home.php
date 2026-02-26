@@ -105,7 +105,7 @@ $chefImages = [
                 <?php foreach ($featuredChefs as $index => $chef): ?>
                     <?php $chefImage = $chefImages[$index] ?? '/assets/img/chefs/CHANDAN SINGH.jpeg'; ?>
                     <article class="card chef-card reveal">
-                        <img class="chef-photo" src="<?= htmlspecialchars($chefImage) ?>" alt="<?= htmlspecialchars($chef['name']) ?>" loading="lazy" width="400" height="260">
+                        <img class="chef-photo" src="<?= htmlspecialchars($chefImage) ?>" alt="<?= htmlspecialchars($chef['name']) ?>" loading="lazy" width="1080" height="1080">
                         <h3><?= htmlspecialchars($chef['name']) ?></h3>
                     </article>
                 <?php endforeach; ?>
