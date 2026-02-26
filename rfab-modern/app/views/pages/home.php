@@ -1,17 +1,15 @@
 <?php
 declare(strict_types=1);
 
-$brandNames = array_values(array_map(static fn(array $brand): string => (string) ($brand['name'] ?? ''), $brands));
 $brandCoverImages = [
-    '/assets/img/brand/covers/House of Biryani.jpeg',
+    '/assets/img/brand/covers/Kulhad Biryani.jpeg',
+    '/assets/img/brand/covers/Matka Biryani.jpeg',
+    '/assets/img/brand/covers/Biryaniwalas.jpeg',
+    '/assets/img/brand/covers/Biryani King.jpeg',
     '/assets/img/brand/covers/Handi Biryani.jpeg',
     '/assets/img/brand/covers/Biryani Junction.jpeg',
     '/assets/img/brand/covers/Biryani Farm.jpeg',
-    '/assets/img/brand/covers/Biryani King.jpeg',
-    '/assets/img/brand/covers/Biryaniwala\'s.jpeg',
-    '/assets/img/brand/covers/Kulhad Biryani.jpeg',
-    '/assets/img/brand/covers/Matka Biryani.jpeg',
-    '/assets/img/brand/covers/The earthen pot biryani.jpeg',
+    '/assets/img/brand/covers/House of Biryani.jpeg',
 ];
 
 $featuredChefs = array_slice($chefs, 0, 2);
@@ -64,16 +62,16 @@ $chefImages = [
         <h2>Our Authentic Brands of Biryani</h2>
         <p class="muted">With authentic Indian and Mughlai taste.</p>
         <div class="brands-grid">
-            <?php for ($i = 1; $i <= 9; $i++): ?>
-                <?php $name = $brandNames[$i - 1] ?? ('Brand ' . $i); ?>
-                <?php $cover = $brandCoverImages[$i - 1] ?? '/assets/img/brand/covers/House of Biryani.jpeg'; ?>
-                <article class="brand-card reveal">
-                    <img class="brand-cover-image" src="<?= htmlspecialchars($cover) ?>" alt="<?= htmlspecialchars($name) ?>" loading="lazy" width="720" height="720">
+            <?php foreach ($brands as $index => $brand): ?>
+                <?php $name = (string) ($brand['name'] ?? ''); ?>
+                <?php $cover = $brandCoverImages[$index] ?? '/assets/img/brand/covers/House of Biryani.jpeg'; ?>
+                <article class="brand-card reveal home-brand-card">
+                    <img class="brand-cover-image home-brand-cover" src="<?= htmlspecialchars($cover) ?>" alt="<?= htmlspecialchars($name) ?>" loading="lazy" width="1080" height="1080">
                     <div class="brand-card-body">
                         <h3><?= htmlspecialchars($name) ?></h3>
                     </div>
                 </article>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
