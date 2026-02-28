@@ -56,8 +56,10 @@ $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''
             <h2>Pure Hydration Experience</h2>
             <p>Khoobi is crafted for clean, reliable hydration with a crisp taste profile and easy daily usability.</p>
             <p>From office routines to travel and active lifestyles, the practical pack options and quality-focused production make Khoobi a dependable choice.</p>
+            <p>Its smooth mouthfeel and balanced mineral profile are designed for consistent daily intake, helping you stay refreshed through long work hours, meetings, and active routines.</p>
+            <p>Whether used at home, in gyms, during events, or for business supply, Khoobi combines modern packaging quality with trusted hydration standards for every age group.</p>
         </div>
-        <img class="khoobi-mid-image" src="/assets/img/brand/covers/khoobi-3.jpeg" alt="Khoobi alkaline water bottle" loading="lazy" decoding="async" width="1080" height="1080">
+        <img class="khoobi-mid-image" src="/assets/img/brand/covers/khoobi-img-3.png" alt="Khoobi alkaline water bottle" loading="lazy" decoding="async" width="1080" height="1080">
     </div>
 </section>
 
