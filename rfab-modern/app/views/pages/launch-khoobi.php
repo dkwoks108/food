@@ -31,15 +31,20 @@ $khoobiImages = [
                 <a class="btn btn-ghost" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($khoobiWaMessage) ?>" target="_blank" rel="noopener">WhatsApp for Khoobi</a>
             </div>
         </div>
-        <div class="khoobi-gallery" aria-label="Khoobi water product gallery">
-            <?php foreach ($khoobiImages as $index => $image): ?>
-                <img
-                    src="<?= htmlspecialchars($image) ?>"
-                    alt="Khoobi alkaline water image <?= $index + 1 ?>"
-                    loading="lazy"
-                    decoding="async"
-                >
-            <?php endforeach; ?>
+        <div class="swiper khoobi-hero-swiper" role="region" aria-label="Khoobi water hero slider">
+            <div class="swiper-wrapper">
+                <?php foreach ($khoobiImages as $index => $image): ?>
+                    <div class="swiper-slide">
+                        <img
+                            src="<?= htmlspecialchars($image) ?>"
+                            alt="Khoobi alkaline water image <?= $index + 1 ?>"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div class="swiper-pagination khoobi-hero-pagination"></div>
         </div>
     </div>
 </section>
