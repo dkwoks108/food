@@ -3,6 +3,16 @@ declare(strict_types=1);
 
 $khoobiWaMessage = 'Hi Roshani Foods & Bevrages, I want inquiry for Khoobi Alkaline Water. Please share pricing and availability for 200ml and 1L bottles.';
 $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''));
+$khoobiImages = [
+    '/assets/img/brand/covers/khoobi-1.jpeg',
+    '/assets/img/brand/covers/khoobi-2.jpeg',
+    '/assets/img/brand/covers/khoobi-3.jpeg',
+    '/assets/img/brand/covers/khoobi-4.jpeg',
+    '/assets/img/brand/covers/khoobi-5.jpeg',
+    '/assets/img/brand/covers/khoobi-6.jpeg',
+    '/assets/img/brand/covers/khoobi-7.jpeg',
+    '/assets/img/brand/covers/khoobi-8.jpeg',
+];
 ?>
 <section class="section page-hero khoobi-hero">
     <div class="container split khoobi-layout">
@@ -21,7 +31,16 @@ $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''
                 <a class="btn btn-ghost" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($khoobiWaMessage) ?>" target="_blank" rel="noopener">WhatsApp for Khoobi</a>
             </div>
         </div>
-        <div class="khoobi-bottle" aria-hidden="true"></div>
+        <div class="khoobi-gallery" aria-label="Khoobi water product gallery">
+            <?php foreach ($khoobiImages as $index => $image): ?>
+                <img
+                    src="<?= htmlspecialchars($image) ?>"
+                    alt="Khoobi alkaline water image <?= $index + 1 ?>"
+                    loading="lazy"
+                    decoding="async"
+                >
+            <?php endforeach; ?>
+        </div>
     </div>
 </section>
 

@@ -13,6 +13,8 @@
 .site-header.header-hidden{transform:translateY(-120%)}
 .khoobi-layout{align-items:center}
 .khoobi-layout .cta-row{justify-content:flex-start}
+.khoobi-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+.khoobi-gallery img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:.8rem;border:1px solid var(--border)}
 .hp-field{position:absolute;left:-9999px;opacity:0;pointer-events:none;height:0;width:0}
 .product-item{display:flex;align-items:center;justify-content:space-between;gap:.7rem;padding:.25rem 0}
 .product-order-btn{white-space:nowrap;min-width:88px;justify-content:center}
@@ -30,4 +32,4 @@
 @media (min-width:1025px){.hero-pin::before{content:'';position:absolute;inset:0;background:radial-gradient(122% 84% at 50% 45%,transparent 34%,rgba(5,8,12,.58) 70%,rgba(3,5,8,.88) 100%);z-index:2;pointer-events:none}.hero-pin::after{content:'';position:absolute;right:.8rem;bottom:.8rem;width:122px;height:52px;border-radius:999px;background:linear-gradient(180deg,rgba(11,15,18,.78),rgba(11,15,18,.94));box-shadow:0 0 0 1px rgba(255,255,255,.03) inset;backdrop-filter:blur(.3rem);-webkit-backdrop-filter:blur(.3rem);z-index:4;pointer-events:none}.brands-page-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.brands-page-grid .card{padding:.8rem}.brands-page-grid .brand-page-cover{aspect-ratio:1/1;height:auto;object-position:center 20%;margin-bottom:.75rem}}
 @media (max-width:760px){.brand-mark img{height:44px}}
 @media (max-width:1024px){.reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:760px){.card-grid.small-grid{gap:.75rem}.brand-page-cover,.chef-photo{margin-bottom:.7rem;border-radius:.7rem}.home-brand-cover{height:220px}.hero-poster{object-position:center center}.khoobi-layout .cta-row{justify-content:flex-start}.khoobi-bottle{height:230px}.khoobi-info-grid{grid-template-columns:1fr;gap:.75rem}.khoobi-actions{margin-top:1.05rem}.product-item{align-items:flex-start;flex-direction:column}.product-order-btn{width:100%}.reviews-grid{grid-template-columns:1fr;gap:.85rem}}
+@media (max-width:760px){.card-grid.small-grid{gap:.75rem}.brand-page-cover,.chef-photo{margin-bottom:.7rem;border-radius:.7rem}.home-brand-cover{height:220px}.hero-poster{object-position:center center}.khoobi-layout .cta-row{justify-content:flex-start}.khoobi-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}.khoobi-info-grid{grid-template-columns:1fr;gap:.75rem}.khoobi-actions{margin-top:1.05rem}.product-item{align-items:flex-start;flex-direction:column}.product-order-btn{width:100%}.reviews-grid{grid-template-columns:1fr;gap:.85rem}}
