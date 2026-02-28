@@ -18,16 +18,31 @@ $chefImages = [
     '/assets/img/chefs/CHANDAN SINGH.jpeg',
     '/assets/img/chefs/BILLU YADAV.jpeg',
 ];
+$heroImages = [
+    '/assets/img/brand/covers/khoobi-1.jpeg',
+    '/assets/img/brand/covers/khoobi-2.jpeg',
+    '/assets/img/brand/covers/khoobi-3.jpeg',
+    '/assets/img/brand/covers/khoobi-4.jpeg',
+    '/assets/img/brand/covers/khoobi-5.jpeg',
+    '/assets/img/brand/covers/khoobi-6.jpeg',
+    '/assets/img/brand/covers/khoobi-7.jpeg',
+    '/assets/img/brand/covers/khoobi-8.jpeg',
+];
+$homeOrderMessage = 'Hi Roshani Foods & Bevrages, I want to order authentic biryani. Please share today’s menu and prices.';
+$homeWaNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''));
 ?>
-<section class="hero-video-section" id="hero-video"
-    data-frame-path="/assets/frames/biryani_"
-    data-frame-ext=".webp"
-    data-frame-count="60"
-    data-frame-w="1920"
-    data-frame-h="1080">
+<section class="hero-video-section home-hero-slider-section" id="hero-slider">
     <div class="hero-pin" data-hero-pin>
-        <canvas class="hero-canvas" aria-label="RFAB cinematic biryani presentation"></canvas>
-        <img class="hero-poster" src="/assets/frames/biryani_0001.webp" alt="RFAB Hero Poster" width="1920" height="1080" fetchpriority="high">
+        <div class="swiper home-hero-swiper" role="region" aria-label="RFAB hero image slider">
+            <div class="swiper-wrapper">
+                <?php foreach ($heroImages as $index => $image): ?>
+                    <div class="swiper-slide">
+                        <img src="<?= htmlspecialchars($image) ?>" alt="RFAB hero image <?= $index + 1 ?>" width="1920" height="1080" loading="eager" fetchpriority="high">
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div class="swiper-pagination home-hero-pagination"></div>
+        </div>
 
         <div class="hero-overlay" aria-hidden="true"></div>
 
@@ -35,6 +50,10 @@ $chefImages = [
             <p class="eyebrow">THE AUTHENTIC CLOUD KITCHEN CHAIN</p>
             <h1>Roshani Foods &amp; Beverages</h1>
             <p class="hero-subtext">Authentic biryani flavor, layered aroma, and signature craftsmanship in every serving.</p>
+            <div class="cta-row">
+                <a class="btn btn-primary" href="https://wa.me/<?= htmlspecialchars($homeWaNumber) ?>?text=<?= rawurlencode($homeOrderMessage) ?>" target="_blank" rel="noopener">Order Now</a>
+                <a class="btn btn-ghost" href="/products">View Menu</a>
+            </div>
             <div class="meta-row">
                 <span>UDYAM: <?= htmlspecialchars($site['registrations']['udyam'] ?? '') ?></span>
                 <span>SANSTHA: <?= htmlspecialchars($site['registrations']['sansthaAadhaar'] ?? '') ?></span>
