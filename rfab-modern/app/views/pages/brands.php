@@ -31,9 +31,9 @@ $brandCoverImages = [
                 <div class="cta-row">
                     <a class="btn btn-primary btn-small" href="<?= htmlspecialchars($brand['platforms']['zomato'] ?? '#') ?>" target="_blank" rel="noopener">ZOMATO</a>
                     <?php if (!empty($brand['platforms']['swiggy'])): ?>
-                        <a class="btn btn-ghost btn-small" href="<?= htmlspecialchars($brand['platforms']['swiggy']) ?>" target="_blank" rel="noopener">SWIGGY</a>
+                        <a class="btn btn-ghost btn-small swiggy-btn" href="<?= htmlspecialchars($brand['platforms']['swiggy']) ?>" target="_blank" rel="noopener">SWIGGY</a>
                     <?php else: ?>
-                        <span class="btn btn-ghost btn-small btn-disabled" aria-disabled="true">SWIGGY</span>
+                        <span class="btn btn-ghost btn-small btn-disabled swiggy-btn" aria-disabled="true">SWIGGY</span>
                     <?php endif; ?>
                 </div>
             </article>
