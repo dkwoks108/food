@@ -28,7 +28,7 @@
 .faq-item p{margin-top:.65rem;color:var(--muted)}
 .khoobi-bottle{height:340px;background:linear-gradient(180deg,rgba(31,182,255,.26),rgba(98,230,197,.2)),url('/assets/img/brand/covers/khoobi-2.jpeg') center/contain no-repeat;background-color:rgba(11,15,18,.35)}
 .khoobi-mid-split{align-items:center}
-.khoobi-mid-image{display:block;width:100%;max-width:520px;height:340px;object-fit:cover;border-radius:1rem;border:1px solid var(--border);justify-self:end}
+.khoobi-mid-image{display:block;width:100%;max-width:520px;height:340px;object-fit:contain;object-position:center center;background:rgba(11,15,18,.35);border-radius:1rem;border:1px solid var(--border);justify-self:end}
 .khoobi-info-grid{gap:1rem}
 .khoobi-highlights{margin-top:.85rem}
 .khoobi-actions{margin-top:1.35rem}
@@ -36,3 +36,10 @@
 @media (max-width:760px){.brand-mark img{height:44px}}
 @media (max-width:1024px){.reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:760px){.card-grid.small-grid{gap:.75rem}.brand-page-cover,.chef-photo{margin-bottom:.7rem;border-radius:.7rem}.home-brand-cover{height:220px}.hero-poster{object-position:center center}.home-hero-cta{margin-bottom:.65rem}.khoobi-layout .cta-row{justify-content:flex-start}.khoobi-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}.khoobi-bottle{height:250px}.khoobi-mid-image{max-width:none;height:240px;justify-self:stretch}.khoobi-info-grid{grid-template-columns:1fr;gap:.75rem}.khoobi-actions{margin-top:1.05rem}.product-item{align-items:flex-start;flex-direction:column}.product-order-btn{width:100%}.reviews-grid{grid-template-columns:1fr;gap:.85rem}}
+.global-smoke{position:fixed;inset:-14%;pointer-events:none;z-index:0;opacity:.2;overflow:hidden}
+.global-smoke .smoke-layer{position:absolute;inset:0;background:url('/assets/img/ui/smoke-texture.svg') repeat;background-size:540px 540px;filter:blur(12px);will-change:transform}
+.global-smoke .smoke-a{animation:smokeDriftA 95s linear infinite}
+.global-smoke .smoke-b{animation:smokeDriftB 130s linear infinite;opacity:.8;transform:scale(1.08)}
+@keyframes smokeDriftA{0%{transform:translate3d(-4%,0,0)}50%{transform:translate3d(3%,-3%,0)}100%{transform:translate3d(-4%,0,0)}}
+@keyframes smokeDriftB{0%{transform:translate3d(2%,2%,0) scale(1.08)}50%{transform:translate3d(-3%,-2%,0) scale(1.12)}100%{transform:translate3d(2%,2%,0) scale(1.08)}}
+@media (max-width:760px){.global-smoke{opacity:.12}.global-smoke .smoke-layer{filter:blur(9px);background-size:420px 420px}}

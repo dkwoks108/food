@@ -18,6 +18,10 @@ $metaDescription = $metaDescription ?? ($site['seo']['description'] ?? 'Premium 
     <link rel="stylesheet" href="/assets/css/app.min.css">
 </head>
 <body class="no-js">
+<div class="global-smoke" aria-hidden="true">
+    <span class="smoke-layer smoke-a"></span>
+    <span class="smoke-layer smoke-b"></span>
+</div>
 <?php require APP_ROOT . '/views/layouts/header.php'; ?>
 <main id="main-content" tabindex="-1">
     <?= $content ?>
