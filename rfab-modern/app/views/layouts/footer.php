@@ -52,7 +52,7 @@ $waMessage = 'Hi Roshani Foods & Bevrages, I want to order authentic biryani. Pl
         </section>
     </div>
     <div class="container legal-line">
-        <small><?= htmlspecialchars($site['legal']['copyright'] ?? 'Copyright 2026') ?></small>
+        <small>©Copyright 2026.</small>
         <small>
             Developed &amp; SEO Optimized by
             <a href="https://www.veloxis.tech/" target="_blank" rel="noopener noreferrer">Veloxis Tech</a>

@@ -118,6 +118,16 @@ $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''
 
 <section class="section">
     <div class="container">
+        <article class="card reveal">
+            <p>“Biryani by Roshani foods &amp; bevrages is my favorite place in Jaipur the to have authentic Indian taste with a mughlai biryani touch. The quality ingredients, herbs, and spices, gives the truest taste. I keep coming back every time. It is absolutely DELICIOUS!”</p>
+            <p><strong>Kanishk Srivastava</strong></p>
+            <p class="muted">A Regular Customer At Roshani Foods &amp; Bevrages</p>
+        </article>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
         <h2>Reviews</h2>
         <div class="swiper reviews-swiper" role="region" aria-label="Customer reviews">
             <div class="swiper-wrapper">
