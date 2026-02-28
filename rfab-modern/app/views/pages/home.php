@@ -18,6 +18,8 @@ $chefImages = [
     '/assets/img/chefs/CHANDAN SINGH.jpeg',
     '/assets/img/chefs/BILLU YADAV.jpeg',
 ];
+$orderMessage = 'Hi Roshani Foods & Bevrages, I want to order authentic biryani. Please share today’s menu and prices.';
+$waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''));
 ?>
 <section class="hero-video-section" id="hero-video"
     data-frame-path="/assets/frames/biryani_"
@@ -35,6 +37,9 @@ $chefImages = [
             <p class="eyebrow">THE AUTHENTIC CLOUD KITCHEN CHAIN</p>
             <h1>Roshani Foods &amp; Beverages</h1>
             <p class="hero-subtext">Authentic biryani flavor, layered aroma, and signature craftsmanship in every serving.</p>
+            <div class="cta-row home-hero-cta">
+                <a class="btn btn-primary" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($orderMessage) ?>" target="_blank" rel="noopener">Order Now</a>
+            </div>
             <div class="meta-row">
                 <span>UDYAM: <?= htmlspecialchars($site['registrations']['udyam'] ?? '') ?></span>
                 <span>SANSTHA: <?= htmlspecialchars($site['registrations']['sansthaAadhaar'] ?? '') ?></span>

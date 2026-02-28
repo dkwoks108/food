@@ -3,16 +3,6 @@ declare(strict_types=1);
 
 $khoobiWaMessage = 'Hi Roshani Foods & Bevrages, I want inquiry for Khoobi Alkaline Water. Please share pricing and availability for 200ml and 1L bottles.';
 $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''));
-$khoobiImages = [
-    '/assets/img/brand/covers/khoobi-1.jpeg',
-    '/assets/img/brand/covers/khoobi-2.jpeg',
-    '/assets/img/brand/covers/khoobi-3.jpeg',
-    '/assets/img/brand/covers/khoobi-4.jpeg',
-    '/assets/img/brand/covers/khoobi-5.jpeg',
-    '/assets/img/brand/covers/khoobi-6.jpeg',
-    '/assets/img/brand/covers/khoobi-7.jpeg',
-    '/assets/img/brand/covers/khoobi-8.jpeg',
-];
 ?>
 <section class="section page-hero khoobi-hero">
     <div class="container split khoobi-layout">
@@ -31,16 +21,7 @@ $khoobiImages = [
                 <a class="btn btn-ghost" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($khoobiWaMessage) ?>" target="_blank" rel="noopener">WhatsApp for Khoobi</a>
             </div>
         </div>
-        <div class="khoobi-gallery" aria-label="Khoobi water product gallery">
-            <?php foreach ($khoobiImages as $index => $image): ?>
-                <img
-                    src="<?= htmlspecialchars($image) ?>"
-                    alt="Khoobi alkaline water image <?= $index + 1 ?>"
-                    loading="lazy"
-                    decoding="async"
-                >
-            <?php endforeach; ?>
-        </div>
+        <div class="khoobi-bottle" role="img" aria-label="Khoobi alkaline water product image"></div>
     </div>
 </section>
 
@@ -66,6 +47,17 @@ $khoobiImages = [
             <h2>Quality Commitment</h2>
             <p>Khoobi follows hygiene-first production standards with reliable filtration and quality checks. Every bottle is BPA-free and recyclable to support both health and responsible consumption.</p>
         </article>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container split khoobi-mid-split">
+        <div>
+            <h2>Pure Hydration Experience</h2>
+            <p>Khoobi is crafted for clean, reliable hydration with a crisp taste profile and easy daily usability.</p>
+            <p>From office routines to travel and active lifestyles, the practical pack options and quality-focused production make Khoobi a dependable choice.</p>
+        </div>
+        <img class="khoobi-mid-image" src="/assets/img/brand/covers/khoobi-3.jpeg" alt="Khoobi alkaline water bottle" loading="lazy" decoding="async" width="1080" height="1080">
     </div>
 </section>
 
