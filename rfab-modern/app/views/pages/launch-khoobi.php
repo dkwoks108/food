@@ -1,7 +1,8 @@
 <?php
 declare(strict_types=1);
 
-$khoobiWaMessage = 'Hi Roshani Foods & Bevrages, I want inquiry for Khoobi Alkaline Water. Please share pricing and availability for 200ml and 1L bottles.';
+$khoobiInterestMessage = 'Hi Roshani Foods & Bevrages, I am interested in Khoobi Alkaline Water. Please share pricing and availability for 200ml and 1L bottles.';
+$khoobiBusinessMessage = 'Hi Roshani Foods & Bevrages, I want to discuss bulk/business order for Khoobi Alkaline Water. Please share best rates and details.';
 $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''));
 ?>
 <section class="section page-hero khoobi-hero">
@@ -17,8 +18,8 @@ $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''
                 <li>100% Recyclable Bottle</li>
             </ul>
             <div class="cta-row khoobi-actions">
-                <a class="btn btn-primary" href="/contact">Inquire Now</a>
-                <a class="btn btn-ghost" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($khoobiWaMessage) ?>" target="_blank" rel="noopener">WhatsApp for Khoobi</a>
+                <a class="btn btn-primary" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($khoobiInterestMessage) ?>" target="_blank" rel="noopener">I'm Interested in Khoobi</a>
+                <a class="btn btn-primary" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($khoobiBusinessMessage) ?>" target="_blank" rel="noopener">Get Bulk/Business Details</a>
             </div>
         </div>
         <div class="khoobi-bottle" role="img" aria-label="Khoobi alkaline water product image"></div>
