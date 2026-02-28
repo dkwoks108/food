@@ -9,8 +9,6 @@ $menu = [
     '/reviews' => 'Reviews',
     '/contact' => 'Contact',
 ];
-$orderMessage = 'Hi Roshani Foods & Bevrages, I want to order authentic biryani. Please share today’s menu and prices.';
-$waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''));
 ?>
 <header class="site-header">
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -24,7 +22,6 @@ $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''
                 <a href="<?= $path ?>" class="<?= $currentPath === $path ? 'active' : '' ?>"><?= htmlspecialchars($label) ?></a>
             <?php endforeach; ?>
             <a href="/new-launch/khoobi-water" class="pill-link">New Launch</a>
-            <a href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($orderMessage) ?>" class="pill-link" target="_blank" rel="noopener">Order Now</a>
         </nav>
     </div>
 </header>

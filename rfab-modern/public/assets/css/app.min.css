@@ -33,10 +33,3 @@
 @media (max-width:760px){.brand-mark img{height:44px}}
 @media (max-width:1024px){.reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:760px){.card-grid.small-grid{gap:.75rem}.brand-page-cover,.chef-photo{margin-bottom:.7rem;border-radius:.7rem}.home-brand-cover{height:220px}.hero-poster{object-position:center center}.khoobi-layout .cta-row{justify-content:flex-start}.khoobi-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}.khoobi-info-grid{grid-template-columns:1fr;gap:.75rem}.khoobi-actions{margin-top:1.05rem}.product-item{align-items:flex-start;flex-direction:column}.product-order-btn{width:100%}.reviews-grid{grid-template-columns:1fr;gap:.85rem}}
-.home-hero-slider-section .hero-pin{overflow:hidden}
-.home-hero-swiper,.home-hero-swiper .swiper-wrapper,.home-hero-swiper .swiper-slide{height:100%}
-.home-hero-swiper{position:absolute;inset:0;z-index:0}
-.home-hero-swiper .swiper-slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:center center}
-.home-hero-slider-section .hero-content .cta-row{margin-top:.6rem}
-.home-hero-slider-section .hero-content .btn{min-width:140px}
-@media (max-width:760px){.home-hero-slider-section .hero-content{padding-bottom:1.1rem}.home-hero-slider-section .hero-content .btn{width:100%;max-width:260px}}
