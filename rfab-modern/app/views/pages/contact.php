@@ -1,23 +1,23 @@
 <?php
 declare(strict_types=1);
 ?>
-<section class="section page-hero">
+<section class="section page-hero contact-page-hero">
     <div class="container">
         <h1>Contact</h1>
         <p class="muted">Get in touch with RFAB.</p>
     </div>
 </section>
 
-<section class="section">
+<section class="section contact-page-section">
     <div class="container split">
-        <div class="card">
+        <div class="card contact-card contact-card-details">
             <h2>Contact Details</h2>
             <p><strong>Phone:</strong> <?= htmlspecialchars($site['phone'] ?? '') ?></p>
             <p><strong>Email:</strong> <?= htmlspecialchars($site['email'] ?? '') ?></p>
             <p><strong>Address:</strong> <?= htmlspecialchars($site['address'] ?? '') ?></p>
         </div>
 
-        <div class="card">
+        <div class="card contact-card contact-card-form">
             <h2>Get In Touch</h2>
             <p class="muted">Make it happen in 4 easy steps.</p>
 

@@ -28,6 +28,7 @@
 .legal-line a{color:var(--gold);transition:color .3s ease}
 .legal-line a:hover{color:#FFFFFF}
 .reviews-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.reviews-grid .stars{color:var(--gold)!important;text-shadow:0 1px 0 rgba(0,0,0,.08)}
 .faq-section{padding-top:2.5rem}
 .faq-list{display:grid;gap:1rem}
 .faq-item{border:1px solid var(--border);border-radius:.4rem;padding:1rem;background:var(--surface);transition:box-shadow .3s ease,border-color .3s ease}
@@ -41,7 +42,7 @@
 .khoobi-info-grid{gap:1.5rem}
 .khoobi-highlights{margin-top:1rem}
 .khoobi-actions{margin-top:1.8rem}
-@media (min-width:1025px){.hero-pin::before{content:'';position:absolute;inset:0;background:radial-gradient(122% 84% at 50% 45%,transparent 34%,rgba(0,0,0,.6) 70%,rgba(0,0,0,.9) 100%);z-index:2;pointer-events:none}.hero-pin::after{content:'';position:absolute;right:1.5rem;bottom:1.5rem;width:122px;height:52px;border-radius:2rem;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.85));border:1px solid rgba(232,139,0,.55);box-shadow:0 0 0 1px rgba(232,139,0,.22) inset,0 8px 24px rgba(0,0,0,.28);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:4;pointer-events:none}.brands-page-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}.brands-page-grid .card{padding:1.2rem}.brands-page-grid .brand-page-cover{aspect-ratio:1/1;height:auto;object-position:center 20%;margin-bottom:1rem}}
+@media (min-width:1025px){.hero-pin::before{content:'';position:absolute;inset:0;background:radial-gradient(122% 84% at 50% 45%,transparent 34%,rgba(0,0,0,.6) 70%,rgba(0,0,0,.9) 100%);z-index:2;pointer-events:none}.hero-pin::after{content:'';position:absolute;right:1.5rem;bottom:1.5rem;width:122px;height:52px;border-radius:2rem;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.9));border:1px solid rgba(0,0,0,.78);box-shadow:0 0 0 1px rgba(0,0,0,.45) inset,0 8px 24px rgba(0,0,0,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:4;pointer-events:none}.brands-page-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}.brands-page-grid .card{padding:1.2rem}.brands-page-grid .brand-page-cover{aspect-ratio:1/1;height:auto;object-position:center 20%;margin-bottom:1rem}}
 @media (max-width:760px){.brand-mark img{height:48px}}
 @media (max-width:1024px){.reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:760px){.card-grid.small-grid{gap:1rem}.brand-page-cover,.chef-photo{margin-bottom:1rem;border-radius:.25rem}.home-brand-cover{height:240px}.hero-poster{object-position:center center}.home-hero-cta{margin-bottom:.8rem}.khoobi-layout .cta-row{justify-content:flex-start}.khoobi-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}.khoobi-bottle{height:280px}.khoobi-mid-image{height:320px;justify-self:center}.khoobi-info-grid{grid-template-columns:1fr;gap:1rem}.khoobi-actions{margin-top:1.2rem}.product-item{align-items:flex-start;flex-direction:column;gap:.6rem}.product-order-btn{width:100%}.reviews-grid{grid-template-columns:1fr;gap:1.2rem}}
@@ -52,3 +53,10 @@
 @keyframes smokeDriftA{0%{transform:translate3d(-4%,0,0)}50%{transform:translate3d(3%,-3%,0)}100%{transform:translate3d(-4%,0,0)}}
 @keyframes smokeDriftB{0%{transform:translate3d(2%,2%,0) scale(1.08)}50%{transform:translate3d(-3%,-2%,0) scale(1.12)}100%{transform:translate3d(2%,2%,0) scale(1.08)}}
 @media (max-width:760px){.global-smoke{opacity:.06}.global-smoke .smoke-layer{filter:blur(10px);background-size:420px 420px}}
+.contact-page-hero{background:linear-gradient(180deg,#FDFBF7,#F8F2EA)}
+.contact-page-section .contact-card{border-color:#E5D5C8;box-shadow:0 10px 24px rgba(34,20,13,.04)}
+.contact-page-section .contact-card h2{color:#8B2C1A}
+.contact-page-section .contact-card-details{background:linear-gradient(180deg,#FFF,#FBF4EC)}
+.contact-page-section .contact-card-form{background:#FFFFFF}
+.contact-page-section .form-grid input,.contact-page-section .form-grid textarea{border-color:#D9C5B8;background:#FFFCF8;color:var(--text)}
+.contact-page-section .form-grid input:focus,.contact-page-section .form-grid textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(232,139,0,.12)}
