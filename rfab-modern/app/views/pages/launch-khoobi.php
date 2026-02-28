@@ -18,7 +18,6 @@ $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''
                 <li>100% Recyclable Bottle</li>
             </ul>
             <div class="cta-row khoobi-actions">
-                <a class="btn btn-primary" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($khoobiInterestMessage) ?>" target="_blank" rel="noopener">I'm Interested in Khoobi</a>
                 <a class="btn btn-primary" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($khoobiBusinessMessage) ?>" target="_blank" rel="noopener">Get Bulk/Business Details</a>
             </div>
         </div>
@@ -74,5 +73,8 @@ $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''
             Vaishali Nagar Jaipur 302021
         </p>
         <p>For more details or business inquiries, please contact our team.</p>
+        <div class="cta-row khoobi-actions">
+            <a class="btn btn-primary" href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($khoobiInterestMessage) ?>" target="_blank" rel="noopener">WhatsApp Inquiry for Khoobi</a>
+        </div>
     </div>
 </section>
