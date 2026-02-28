@@ -12,6 +12,9 @@ $metaDescription = $metaDescription ?? ($site['seo']['description'] ?? 'Premium 
     <title><?= htmlspecialchars($pageTitle) ?></title>
     <meta name="description" content="<?= htmlspecialchars($metaDescription) ?>">
     <meta name="theme-color" content="#0B0F12">
+    <link rel="icon" type="image/jpeg" href="/assets/img/brand/logos/logo.jpeg">
+    <link rel="shortcut icon" type="image/jpeg" href="/assets/img/brand/logos/logo.jpeg">
+    <link rel="apple-touch-icon" href="/assets/img/brand/logos/logo.jpeg">
     <?php require APP_ROOT . '/views/partials/seo-meta.php'; ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="/assets/css/critical.css">
