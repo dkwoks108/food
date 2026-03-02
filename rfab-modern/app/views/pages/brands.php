@@ -4,13 +4,13 @@ declare(strict_types=1);
 $brandCoverImages = [
     '/assets/img/brand/covers/Kulhad Biryani.jpeg',
     '/assets/img/brand/covers/Matka Biryani.jpeg',
-    '/assets/img/brand/covers/Biryaniwalas.jpeg',
+    '/assets/img/brand/covers/ROTI.jpeg',
     '/assets/img/brand/covers/Biryani King.jpeg',
     '/assets/img/brand/covers/Handi Biryani.jpeg',
     '/assets/img/brand/covers/Biryani Junction.jpeg',
-    '/assets/img/brand/covers/Biryani Farm.jpeg',
-    '/assets/img/brand/covers/House of Biryani.jpeg',
-    '/assets/img/brand/covers/The earthen pot biryani.jpeg',
+    '/assets/img/brand/covers/CHICKEN KITCHEN.jpeg',
+    '/assets/img/brand/covers/TIKKA AND KABAB .jpeg',
+    '/assets/img/brand/covers/CHAKNA AND SNAKS.jpeg',
 ];
 ?>
 <section class="section page-hero">

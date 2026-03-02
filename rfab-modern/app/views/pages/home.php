@@ -4,13 +4,13 @@ declare(strict_types=1);
 $brandCoverImages = [
     '/assets/img/brand/covers/Kulhad Biryani.jpeg',
     '/assets/img/brand/covers/Matka Biryani.jpeg',
-    '/assets/img/brand/covers/Biryaniwalas.jpeg',
+    '/assets/img/brand/covers/ROTI.jpeg',
     '/assets/img/brand/covers/Biryani King.jpeg',
     '/assets/img/brand/covers/Handi Biryani.jpeg',
     '/assets/img/brand/covers/Biryani Junction.jpeg',
-    '/assets/img/brand/covers/Biryani Farm.jpeg',
-    '/assets/img/brand/covers/House of Biryani.jpeg',
-    '/assets/img/brand/covers/The earthen pot biryani.jpeg',
+    '/assets/img/brand/covers/CHICKEN KITCHEN.jpeg',
+    '/assets/img/brand/covers/TIKKA AND KABAB .jpeg',
+    '/assets/img/brand/covers/CHAKNA AND SNAKS.jpeg',
 ];
 
 $featuredChefs = array_slice($chefs, 0, 2);
@@ -21,15 +21,12 @@ $chefImages = [
 $orderMessage = 'Hi Roshani Foods & Bevrages, I want to order authentic biryani. Please share today’s menu and prices.';
 $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''));
 ?>
-<section class="hero-video-section" id="hero-video"
-    data-frame-path="/assets/frames/biryani_"
-    data-frame-ext=".webp"
-    data-frame-count="60"
-    data-frame-w="1920"
-    data-frame-h="1080">
+<section class="hero-video-section" id="hero-video">
     <div class="hero-pin" data-hero-pin>
-        <canvas class="hero-canvas" aria-label="RFAB cinematic biryani presentation"></canvas>
-        <img class="hero-poster" src="/assets/frames/biryani_0001.webp" alt="RFAB Hero Poster" width="1920" height="1080" fetchpriority="high">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="/assets/frames/biryani_0001.webp">
+            <source src="/assets/video/hero.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
         <div class="hero-overlay" aria-hidden="true"></div>
 

@@ -23,7 +23,7 @@ $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''
             <?php foreach ($menu as $path => $label): ?>
                 <a href="<?= $path ?>" class="<?= $currentPath === $path ? 'active' : '' ?>"><?= htmlspecialchars($label) ?></a>
             <?php endforeach; ?>
-            <a href="/new-launch/khoobi-water" class="pill-link">New Launch</a>
+            <a href="/new-launch/khoobi-water" class="pill-link new-launch-highlight">New Launch</a>
             <a href="https://wa.me/<?= htmlspecialchars($waNumber) ?>?text=<?= rawurlencode($orderMessage) ?>" class="pill-link" target="_blank" rel="noopener">Order Now</a>
         </nav>
     </div>

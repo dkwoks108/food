@@ -19,6 +19,7 @@ $metaDescription = $metaDescription ?? ($site['seo']['description'] ?? 'Premium 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="/assets/css/critical.css">
     <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="/assets/css/custom-enhancements.css">
 </head>
 <body class="no-js">
 <div class="global-smoke" aria-hidden="true">
@@ -32,6 +33,7 @@ $metaDescription = $metaDescription ?? ($site['seo']['description'] ?? 'Premium 
 <?php require APP_ROOT . '/views/partials/faq-section.php'; ?>
 <?php require APP_ROOT . '/views/layouts/footer.php'; ?>
 <?php require APP_ROOT . '/views/partials/whatsapp-float.php'; ?>
+<?php require APP_ROOT . '/views/partials/review-popup.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>

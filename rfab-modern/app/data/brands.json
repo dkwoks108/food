@@ -20,10 +20,10 @@
     }
   },
   {
-    "id": "biryaniwalas",
-    "name": "Biryaniwala's",
-    "fssaiNo": "22225083000698",
-    "description": "",
+    "id": "roti",
+    "name": "ROTI",
+    "fssaiNo": "22226067001784",
+    "description": "(Pure veg)",
     "platforms": {
       "zomato": "https://zomato.onelink.me/xqzv/wy59wspg",
       "swiggy": ""
@@ -60,9 +60,9 @@
     }
   },
   {
-    "id": "biryani-farm",
-    "name": "Biryani Farm",
-    "fssaiNo": "22225112000694",
+    "id": "chicken-kitchen",
+    "name": "CHICKEN KITCHEN",
+    "fssaiNo": "22226067001785",
     "description": "",
     "platforms": {
       "zomato": "https://zomato.onelink.me/xqzv/35lsjjwz",
@@ -70,9 +70,9 @@
     }
   },
   {
-    "id": "the-house-of-biryani",
-    "name": "The House of Biryani",
-    "fssaiNo": "22225112000693",
+    "id": "tikka-and-kabab",
+    "name": "TIKKA AND KABAB",
+    "fssaiNo": "22226067001787",
     "description": "",
     "platforms": {
       "zomato": "https://zomato.onelink.me/xqzv/gbubxzqj",
@@ -80,9 +80,9 @@
     }
   },
   {
-    "id": "the-earthen-pot-biryani",
-    "name": "The earthen pot biryani",
-    "fssaiNo": "",
+    "id": "chakna-and-snaks",
+    "name": "CHAKNA AND SNAKS",
+    "fssaiNo": "22226067001786",
     "description": "",
     "platforms": {
       "zomato": "#",
