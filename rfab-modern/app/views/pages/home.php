@@ -23,8 +23,8 @@ $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''
 ?>
 <section class="hero-video-section" id="hero-video">
     <div class="hero-pin" data-hero-pin>
-        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="/assets/frames/biryani_0001.webp">
-            <source src="/assets/video/hero.mp4" type="video/mp4">
+        <video id="hero-video-player" class="hero-video" autoplay muted loop playsinline preload="auto" poster="/assets/frames/biryani_0001.webp">
+            <source src="/assets/video/Flow_delpmaspu222_4k.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
@@ -45,6 +45,40 @@ $waNumber = (string) preg_replace('/\D+/', '', (string) ($site['whatsapp'] ?? ''
         </div>
     </div>
 </section>
+
+<script>
+// Ensure hero video plays automatically
+(function() {
+    const video = document.getElementById('hero-video-player');
+    if (!video) return;
+
+    // Function to play video
+    function playVideo() {
+        video.play().catch(function(error) {
+            console.log('Video autoplay prevented:', error);
+            // If autoplay fails, try playing on user interaction
+            document.addEventListener('click', function playOnClick() {
+                video.play();
+                document.removeEventListener('click', playOnClick);
+            }, { once: true });
+        });
+    }
+
+    // Try to play when video is loaded
+    if (video.readyState >= 3) {
+        playVideo();
+    } else {
+        video.addEventListener('loadeddata', playVideo);
+    }
+
+    // Ensure video keeps playing if it stops
+    video.addEventListener('pause', function() {
+        if (!video.ended) {
+            video.play();
+        }
+    });
+})();
+</script>
 
 <section class="section">
     <div class="container">
